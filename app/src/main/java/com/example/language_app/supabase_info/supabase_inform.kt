@@ -1,0 +1,4 @@
+package com.example.language_app.supabase_info
+
+val key: String = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxzbWd6dG9pd2R6d2p3c25zanNvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTM4OTM2MjksImV4cCI6MjAyOTQ2OTYyOX0.vURaX6C6NuM4PlGBoWmJdzLMDwMzUTdwerhjfR6kZAc"
+val url: String = "https://lsmgztoiwdzwjwsnsjso.supabase.co"
