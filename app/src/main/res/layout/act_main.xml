@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.base.MainActivity">
+
+    <ImageView
+        android:id="@+id/ivTopBlock"
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        android:background="@color/deep_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivUserPhoto"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="50dp"
+        android:elevation="2dp"
+        app:layout_constraintStart_toStartOf="@+id/ivTopBlock"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvUserWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text = "Hello, Emil"
+        style="@style/h5Medium"
+        android:textColor="@color/white"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivUserPhoto" />
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/textActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/gray_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvUserWelcome"
+        android:text="@string/main_activity_motivation" />
+
+    <TextView
+        android:id="@+id/tvLeaderBoardTitle"
+        style="@style/h6Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="11dp"
+        android:text="@string/main_leaderboard_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivTopBlock" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvLeaderBoard"
+        android:layout_width="wrap_content"
+        android:layout_height="212dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvLeaderBoardTitle" />
+
+    <TextView
+        android:id="@+id/tvExercisesTitle"
+        style="@style/h6Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="1dp"
+        android:text="@string/main_exercises_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rvLeaderBoard" />
+
+    <ImageView
+        android:id="@+id/layoutGuess"
+        android:background="@drawable/guess_task_background"
+        android:layout_width="153dp"
+        android:layout_height="117dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="9dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvExercisesTitle" />
+
+    <ImageView
+        android:id="@+id/layoutTexting"
+        android:background="@drawable/texting_task_background"
+        android:layout_width="153dp"
+        android:layout_height="117dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvExercisesTitle" />
+
+    <ImageView
+        android:id="@+id/layoutAudition"
+        android:background="@drawable/audition_task_background"
+        android:layout_width="153dp"
+        android:layout_height="117dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="17dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutGuess" />
+
+    <ImageView
+        android:id="@+id/layoutGame"
+        android:background="@drawable/game_task_background"
+        android:layout_width="153dp"
+        android:layout_height="117dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginTop="17dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutTexting" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
