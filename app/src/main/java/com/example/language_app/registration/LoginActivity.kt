@@ -12,7 +12,7 @@ import android.text.style.ForegroundColorSpan
 import android.view.View
 import androidx.core.content.ContextCompat.getColor
 import androidx.lifecycle.lifecycleScope
-import com.example.language_app.base_actitvities.ActivityBase
+import com.example.language_app.base_activities.ActivityBase
 import com.example.language_app.Application.Companion.storage
 import com.example.language_app.Application.Companion.supabaseClient
 import com.example.language_app.R

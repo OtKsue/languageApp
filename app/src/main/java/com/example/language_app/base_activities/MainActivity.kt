@@ -1,4 +1,4 @@
-package com.example.language_app.base_actitvities
+package com.example.language_app.base_activities
 
 import android.content.Intent
 import android.os.Bundle

@@ -4,13 +4,13 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.language_app.base_actitvities.ActivityBase
+import com.example.language_app.base_activities.ActivityBase
 import com.example.language_app.databinding.ActivityLanguageSelectBinding
 import com.example.language_app.databinding.ActivityLanguageSelectBinding.inflate
-import com.example.language_app.base_actitvities.setLocale
-import com.example.language_app.base_actitvities.MainActivity
+import com.example.language_app.base_activities.setLocale
+import com.example.language_app.base_activities.MainActivity
 import com.example.language_app.account.login.LoginActivity
-import com.example.language_app.base_actitvities.setLocale
+import com.example.language_app.base_activities.setLocale
 import com.example.language_app.databinding.ActivityLanguageSelectBinding
 import com.example.language_app.databinding.ActivityLanguageSelectBinding.inflate
 
