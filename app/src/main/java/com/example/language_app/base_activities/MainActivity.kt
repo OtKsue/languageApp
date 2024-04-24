@@ -9,10 +9,9 @@ import coil.transform.CircleCropTransformation
 import com.example.language_app.Application.Companion.supabaseClient
 import com.example.language_app.R
 import com.example.language_app.adapters.LeaderBoardAdapter
-import com.example.language_app.database.User
-import com.example.language_app.database.UserInfo
+import com.example.language_app.databases.User
+import com.example.language_app.databases.UserInfo
 import com.example.language_app.databinding.ActivityMainBinding
-import com.example.language_app.database.tables.usersTableName
 import com.example.language_app.tasks.audition.AuditionActivity
 import com.example.language_app.tasks.game.GameActivity
 import com.example.language_app.tasks.guess.GuessActivity
@@ -30,7 +29,7 @@ class MainActivity : ActivityBase <ActivityMainBinding>() {
     override val screenBinding: ActivityMainBinding by lazy {
         ActivityMainBinding.inflate(layoutInflater)
     }
-
+    private val usersTableName = "Users_Information"
     private var users: MutableList<User> = mutableListOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {

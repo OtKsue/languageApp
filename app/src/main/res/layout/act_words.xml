@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".exercises.multiplayer.MultiplayerActivity">
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:elevation="2dp"
+        android:layout_width="17dp"
+        android:layout_height="27dp"
+        android:background="@drawable/back_icon"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivTopBlock"
+        app:layout_constraintStart_toStartOf="@+id/ivTopBlock" />
+
+    <ImageView
+        android:id="@+id/ivTopBlock"
+        android:layout_width="match_parent"
+        android:layout_height="92dp"
+        android:background="@color/deep_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvWordHeader"
+        style="@style/h5Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="21dp"
+        android:gravity="center_horizontal"
+        android:text="@string/word_exercise_title"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/ivTopBlock"
+        app:layout_constraintStart_toEndOf="@+id/ivBack" />
+
+    <TextView
+        android:id="@+id/tvEnglishVariant"
+        style="@style/h4"
+        tools:text = "gardener"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivTopBlock" />
+
+    <TextView
+        android:id="@+id/tvTranscription"
+        style="@style/bodyLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text = "[ 'gɑ:dnə ]"
+        android:layout_marginTop="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEnglishVariant" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvWords"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTranscription" />
+
+    <Button
+        android:id="@+id/btnAction"
+        style="@style/selectBlueButton"
+        android:layout_marginBottom="27dp"
+        android:text="@string/word_exercise_check"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

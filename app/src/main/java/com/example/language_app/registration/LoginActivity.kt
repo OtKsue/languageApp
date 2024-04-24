@@ -17,12 +17,12 @@ import com.example.language_app.Application.Companion.storage
 import com.example.language_app.Application.Companion.supabaseClient
 import com.example.language_app.R
 import com.example.language_app.databinding.ActivityLoginBinding
-import com.example.language_app.activities.base.isEmailValid
-import com.example.language_app.activities.base.isPasswordValid
+import com.example.language_app.base_activities.isEmailValid
+import com.example.language_app.base_activities.isPasswordValid
 import com.example.language_app.activities.language.LanguageActivity
-import com.example.language_app.activities.base.MainActivity
-import com.example.language_app.activities.base.showInvalidDataDialog
-import com.example.language_app.activities.base.showNoSignInDialog
+import com.example.language_app.base_activities.MainActivity
+import com.example.language_app.base_activities.showInvalidDataDialog
+import com.example.language_app.base_activities.showNoSignInDialog
 import com.example.language_app.account.signup.SignupActivity
 import io.github.jan.supabase.gotrue.auth
 import io.github.jan.supabase.gotrue.providers.builtin.Email

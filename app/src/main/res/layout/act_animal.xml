@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.tasks.guess.GuessActivity">
+
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:elevation="2dp"
+        android:layout_width="17dp"
+        android:layout_height="27dp"
+        android:background="@drawable/back_icon"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivTopBlock"
+        app:layout_constraintStart_toStartOf="@+id/ivTopBlock" />
+
+    <ImageView
+        android:id="@+id/ivTopBlock"
+        android:layout_width="match_parent"
+        android:layout_height="92dp"
+        android:background="@color/deep_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvAnimalsHeader"
+        style="@style/h5Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="21dp"
+        android:gravity="center_horizontal"
+        android:text="@string/animal_exercise_title"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/ivTopBlock"
+        app:layout_constraintStart_toEndOf="@+id/ivBack" />
+
+    <ImageView
+        android:id="@+id/ivAnimalPhoto"
+        android:background="@drawable/default_user_photo"
+        android:layout_width="328dp"
+        android:layout_height="328dp"
+        android:layout_marginTop="17dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivTopBlock" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clInputArea"
+        android:layout_width="327dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivAnimalPhoto">
+
+        <TextView
+            android:id="@+id/tvInputTitle"
+            style="@style/bodyMediumSmallTitles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/animal_exercise_request"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/animalTextInputLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvInputTitle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputAnimalEditText"
+                style="@style/textInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btnCheckAnimal"
+        style="@style/selectBlueButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="17dp"
+        android:text="@string/animal_exercise_check"
+        app:layout_constraintTop_toBottomOf="@+id/clInputArea" />
+
+    <TextView
+        android:id="@+id/tvResultIcon"
+        android:fontFamily="@font/fredoka_regular"
+        tools:text="@string/animal_good_answer_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textSize="160sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivTopBlock"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tvAnimalMessage"
+        style="@style/h5Medium"
+        android:gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvResultIcon"
+        tools:text="@string/animal_exercise_good"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/btnAnimalNext"
+        style="@style/selectBlueButton"
+        android:text="@string/animal_exercise_next"
+        android:layout_marginTop="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvResultIcon"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/btnAnimalAgain"
+        style="@style/selectBlueButton"
+        android:text="@string/animal_exercise_again"
+        android:layout_marginTop="11dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAnimalNext"
+        android:visibility="gone"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

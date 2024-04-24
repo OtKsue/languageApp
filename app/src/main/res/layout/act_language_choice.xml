@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorOnBackground"
+    tools:context=".language_selection.ActivityLanguage">
+
+    <ImageView
+        android:id="@+id/ivTopBlock"
+        android:layout_width="match_parent"
+        android:layout_height="92dp"
+        android:background="@color/deep_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvLoginHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/fredoka_medium_regular"
+        android:gravity="center_horizontal"
+        android:text="@string/language_select_title"
+        android:textColor="#FFFFFF"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivTopBlock"
+        app:layout_constraintEnd_toEndOf="@+id/ivTopBlock"
+        app:layout_constraintStart_toStartOf="@+id/ivTopBlock" />
+
+
+    <TextView
+        style="@style/h5Medium"
+        android:id="@+id/tvSelectLanguageQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="114dp"
+        android:text="@string/language_select_question"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvLanguageButtons"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSelectLanguageQuestion">
+
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <Button
+        android:id="@+id/btnChooseLanguage"
+        style="@style/selectBlueButton"
+        android:layout_marginBottom="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/language_select_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

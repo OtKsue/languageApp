@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".exercises.audition.AuditionExerciseActivity">
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:elevation="2dp"
+        android:layout_width="17dp"
+        android:layout_height="27dp"
+        android:background="@drawable/back_icon"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivTopBlock"
+        app:layout_constraintStart_toStartOf="@+id/ivTopBlock" />
+
+    <ImageView
+        android:id="@+id/ivTopBlock"
+        android:layout_width="match_parent"
+        android:layout_height="92dp"
+        android:background="@color/deep_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvAuditionHeader"
+        style="@style/h5Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="21dp"
+        android:gravity="center_horizontal"
+        android:text="@string/audition_exercise_title"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/ivTopBlock"
+        app:layout_constraintStart_toEndOf="@+id/ivBack" />
+
+    <TextView
+        android:id="@+id/tvWord"
+        style="@style/h5Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivTopBlock"
+        tools:text="cucumber" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvTranscription"
+        style="@style/bodyMedium"
+        tools:text="[ 'kju:kʌmbə ]"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvWord" />
+
+    <TextView
+        android:id="@+id/tvWelcome"
+        android:layout_width="327dp"
+        style="@style/h5Medium"
+        android:layout_marginTop="68dp"
+        android:layout_height="wrap_content"
+        android:text="@string/audition_exercise_welcome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTranscription" />
+
+    <TextView
+        android:id="@+id/tvResultMessage"
+        android:layout_width="327dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvWelcome" />
+
+    <Button
+        android:id="@+id/btnAction"
+        style="@style/selectBlueButton"
+        android:layout_marginBottom="25dp"
+        android:text="@string/audition_exercise_button_check"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
