@@ -1,5 +1,4 @@
-package com.example.language_app
-package com.example.language_app.base_activities
+package com.example.language_app.util
 
 @file:Suppress("DEPRECATION")
 
