@@ -1,5 +1,19 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    
+    <attr name="colorSmallTitle"/>
+    <attr name="colorActivity"/>
+    
+    <style name="Base.Theme.LanguageApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorOnBackground">@color/light_background</item>
+        <item name="colorPrimary">@color/dark_text</item>
+        <item name="colorSecondary">@color/opacity_dark_text</item>
+        <item name="colorSmallTitle">@color/dark_lighter</item>
+        <item name="colorActivity">@color/gray_dark</item>
+    </style>
 
-    <style name="Theme.Language_app" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Theme.LanguageApp" parent="Base.Theme.LanguageApp" />
+    <style name="LanguageAppSplashTheme">
+        <item name="android:windowSplashScreenBackground" tools:targetApi="s">@color/deep_blue</item>
+    </style>
 </resources>
