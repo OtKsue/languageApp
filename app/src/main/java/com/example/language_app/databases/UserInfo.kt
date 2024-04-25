@@ -4,7 +4,7 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-class UserInfo {
+class UserInfo (
     val id: String,
     @SerialName("first_name")
     val firstName: String,
@@ -15,4 +15,4 @@ class UserInfo {
     @SerialName("photo_url")
     val userPhotoUrl: String? = null,
     val points: Double = 0.0,
-}
+)
