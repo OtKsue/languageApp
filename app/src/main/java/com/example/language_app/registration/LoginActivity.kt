@@ -13,13 +13,13 @@ import android.view.View
 import androidx.core.content.ContextCompat.getColor
 import androidx.lifecycle.lifecycleScope
 import com.example.language_app.base_activities.ActivityBase
-import com.example.language_app.Application.Companion.storage
-import com.example.language_app.Application.Companion.supabaseClient
+import com.example.language_app.databases.Initialization.Companion.storage
+import com.example.language_app.databases.Initialization.Companion.supabaseClient
 import com.example.language_app.R
 import com.example.language_app.databinding.ActivityLoginBinding
 import com.example.language_app.base_activities.isEmailValid
 import com.example.language_app.base_activities.isPasswordValid
-import com.example.language_app.activities.language.LanguageActivity
+import com.example.language_app.language_selection.ActivityLanguage
 import com.example.language_app.base_activities.MainActivity
 import com.example.language_app.base_activities.showInvalidDataDialog
 import com.example.language_app.base_activities.showNoSignInDialog
@@ -41,7 +41,7 @@ class LoginActivity : ActivityBase<ActivityLoginBinding>() {
         super.onCreate(savedInstanceState)
 
         screenBinding.ivBack.setOnClickListener {
-            startActivity(Intent(this, LanguageActivity::class.java))
+            startActivity(Intent(this, ActivityLanguage::class.java))
             finish()
         }
 

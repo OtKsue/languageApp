@@ -6,7 +6,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import coil.load
 import coil.transform.CircleCropTransformation
-import com.example.language_app.Application.Companion.supabaseClient
+import com.example.language_app.databases.Initialization.Companion.supabaseClient
 import com.example.language_app.R
 import com.example.language_app.adapters.LeaderBoardAdapter
 import com.example.language_app.databases.User

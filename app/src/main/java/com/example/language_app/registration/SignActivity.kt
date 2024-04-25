@@ -14,7 +14,7 @@ import androidx.core.content.ContextCompat
 import androidx.lifecycle.lifecycleScope
 import androidx.viewpager2.widget.ViewPager2
 import com.example.language_app.base_activities.ActivityBase
-import com.example.language_app.Application.Companion.supabaseClient
+import com.example.language_app.databases.Initialization.Companion.supabaseClient
 import com.example.language_app.R
 import com.example.language_app.R.string.signup_before_span
 import com.example.language_app.R.string.signup_complete
@@ -30,13 +30,14 @@ import com.example.language_app.account.login.LoginActivity
 import com.example.language_app.base_activities.MainActivity
 import com.example.language_app.base_activities.showEmailIsBusy
 import com.example.language_app.base_activities.showInvalidDataDialog
-import com.example.language_app.databases.tables.usersTableName
 import io.github.jan.supabase.gotrue.auth
 import io.github.jan.supabase.gotrue.providers.builtin.Email
 import io.github.jan.supabase.postgrest.postgrest
 import kotlinx.coroutines.launch
 import kotlinx.serialization.json.JsonArray
 class SignActivity : ActivityBase<ActivitySignupBinding>() {
+
+    private val usersTableName = "Users_Information"
 
     private val fragList = listOf(
         SignupFirstFragment(),
