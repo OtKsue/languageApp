@@ -1,12 +1,12 @@
-package com.example.language_app.util
-
 @file:Suppress("DEPRECATION")
+
+package com.example.language_app.util
 
 import android.content.Context
 import android.content.res.Configuration
 import android.util.Patterns.EMAIL_ADDRESS
 import androidx.appcompat.app.AlertDialog
-import com.example.language_app.Application.Companion.storage
+import com.example.language_app.databases.Initialization.Companion.storage
 import com.example.language_app.R
 import java.util.*
 import java.util.Locale.setDefault

@@ -13,8 +13,8 @@ import androidx.core.view.WindowInsetsCompat.CONSUMED
 import androidx.core.view.WindowInsetsCompat.Type.systemBars
 import androidx.core.view.updateLayoutParams
 import androidx.viewbinding.ViewBinding
-import com.example.language_app.databinding.ActivityNoConnectionBinding
-import com.example.language_app.databinding.ActivityNoConnectionBinding.inflate
+import com.example.language_app.databinding.ActNoConnectionBinding
+import com.example.language_app.databinding.ActNoConnectionBinding.inflate
 import com.example.language_app.network.NetworkState
 import com.example.language_app.network.NetworkStateListener
 
@@ -22,7 +22,7 @@ abstract class ActivityBase<T: ViewBinding> : AppCompatActivity(), NetworkStateL
 
     private val networkReceiver = NetworkState()
     private var isInternetAvailable = true
-    private val noConnectionBinding: ActivityNoConnectionBinding by lazy {
+    private val noConnectionBinding: ActNoConnectionBinding by lazy {
         inflate(layoutInflater)
     }
 

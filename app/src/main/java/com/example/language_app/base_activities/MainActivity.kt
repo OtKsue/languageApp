@@ -8,15 +8,15 @@ import coil.load
 import coil.transform.CircleCropTransformation
 import com.example.language_app.databases.Initialization.Companion.supabaseClient
 import com.example.language_app.R
-import com.example.language_app.adapters.LeaderBoardAdapter
 import com.example.language_app.databases.User
 import com.example.language_app.databases.UserInfo
-import com.example.language_app.databinding.ActivityMainBinding
-import com.example.language_app.tasks.audition.AuditionActivity
-import com.example.language_app.tasks.game.GameActivity
-import com.example.language_app.tasks.guess.GuessActivity
-import com.example.language_app.tasks.texting.TextPracticeActivity
-import com.example.language_app.profile.UserProfileActivity
+import com.example.language_app.databinding.ActMainBinding
+import com.example.language_app.exercises.ex_audition
+import com.example.language_app.exercises.GameActivity
+import com.example.language_app.exercises.GuessActivity
+import com.example.language_app.exercises.TextPracticeActivity
+import com.example.language_app.user_profile.UserProfileActivity
+import com.example.language_app.top_users.BoardOfLeaders
 import io.github.jan.supabase.gotrue.auth
 import io.github.jan.supabase.postgrest.postgrest
 import io.github.jan.supabase.postgrest.query.Order
@@ -24,10 +24,10 @@ import kotlinx.coroutines.launch
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 
-class MainActivity : ActivityBase <ActivityMainBinding>() {
+class MainActivity : ActivityBase <ActMainBinding>() {
 
-    override val screenBinding: ActivityMainBinding by lazy {
-        ActivityMainBinding.inflate(layoutInflater)
+    override val screenBinding: ActMainBinding by lazy {
+        ActMainBinding.inflate(layoutInflater)
     }
     private val usersTableName = "Users_Information"
     private var users: MutableList<User> = mutableListOf()
@@ -59,7 +59,7 @@ class MainActivity : ActivityBase <ActivityMainBinding>() {
             }
 
             screenBinding.rvLeaderBoard.layoutManager = LinearLayoutManager(this@MainActivity)
-            screenBinding.rvLeaderBoard.adapter = LeaderBoardAdapter(users)
+            screenBinding.rvLeaderBoard.adapter = BoardOfLeaders(users)
 
             screenBinding.ivUserPhoto.setOnClickListener {
                 loadLanguagePreference(UserProfileActivity::class.java, "Users_Information", Json.encodeToString(userInfo))
@@ -74,7 +74,7 @@ class MainActivity : ActivityBase <ActivityMainBinding>() {
             }
 
             screenBinding.layoutAudition.setOnClickListener {
-                loadLanguagePreference(AuditionActivity::class.java, "Users_Information", Json.encodeToString(userInfo))
+                loadLanguagePreference(ex_audition::class.java, "Users_Information", Json.encodeToString(userInfo))
             }
 
             screenBinding.layoutGame.setOnClickListener {

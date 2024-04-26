@@ -21,27 +21,28 @@ import com.example.language_app.R.string.signup_complete
 import com.example.language_app.R.string.signup_continue
 import com.example.language_app.R.string.signup_span
 import com.example.language_app.databases.UserInfo
-import com.example.language_app.databinding.ActivitySignupBinding
-import com.example.language_app.databinding.ActivitySignupBinding.inflate
-import com.example.language_app.base_activities.isEmailValid
-import com.example.language_app.base_activities.isNameValid
-import com.example.language_app.base_activities.isPasswordValid
-import com.example.language_app.account.login.LoginActivity
+import com.example.language_app.databinding.ActSignupBinding
+import com.example.language_app.databinding.ActSignupBinding.inflate
+import com.example.language_app.util.isEmailValid
+import com.example.language_app.util.isNameValid
+import com.example.language_app.util.isPasswordValid
+import com.example.language_app.registration.LoginActivity
 import com.example.language_app.base_activities.MainActivity
-import com.example.language_app.base_activities.showEmailIsBusy
-import com.example.language_app.base_activities.showInvalidDataDialog
+import com.example.language_app.util.showEmailIsBusy
+import com.example.language_app.util.showInvalidDataDialog
 import io.github.jan.supabase.gotrue.auth
 import io.github.jan.supabase.gotrue.providers.builtin.Email
 import io.github.jan.supabase.postgrest.postgrest
 import kotlinx.coroutines.launch
 import kotlinx.serialization.json.JsonArray
-class SignActivity : ActivityBase<ActivitySignupBinding>() {
+
+class SignActivity : ActivityBase<ActSignupBinding>() {
 
     private val usersTableName = "Users_Information"
 
     private val fragList = listOf(
-        SignupFirstFragment(),
-        SignupSecondFragment(),
+        FirstSignFragment(),
+        SecSignFragment(),
     )
 
     private var firstName = ""
@@ -52,7 +53,7 @@ class SignActivity : ActivityBase<ActivitySignupBinding>() {
 
     private var currentFragment: Int = 0
 
-    override val screenBinding: ActivitySignupBinding by lazy {
+    override val screenBinding: ActSignupBinding by lazy {
         inflate(layoutInflater)
     }
 
@@ -64,7 +65,7 @@ class SignActivity : ActivityBase<ActivitySignupBinding>() {
             getString(signup_complete),
         )
 
-        val adapter = SignupAdapter(this, fragList)
+        val adapter = SignFragmentsWork(this, fragList)
 
         screenBinding.ivBack.setOnClickListener {
             currentFragment--
@@ -78,14 +79,14 @@ class SignActivity : ActivityBase<ActivitySignupBinding>() {
 
         screenBinding.btnSignup.setOnClickListener {
             lifecycleScope.launch {
-                val firstFragment = adapter.getFragmentByPosition(0) as SignupFirstFragment
-                val secondFragment = adapter.getFragmentByPosition(1) as SignupSecondFragment
+                val firstFragment = adapter.getFragmentByPosition(0) as FirstSignFragment
+                val secondFragment = adapter.getFragmentByPosition(1) as SecSignFragment
                 if (currentFragment == 0) {
                     firstName = firstFragment.getFirstName()
                     secondName = firstFragment.getSecondName()
                     email = firstFragment.getEmail()
                     if (!isEmailValid(email) or !isNameValid(firstName) or !isNameValid(secondName)) {
-                        showInvalidDataDialog(this@SignupActivity)
+                        showInvalidDataDialog(this@SignActivity)
                         return@launch
                     }
 
@@ -95,7 +96,7 @@ class SignActivity : ActivityBase<ActivitySignupBinding>() {
                         }.decodeAs<JsonArray>().size
 
                     if (emailCounts > 0) {
-                        showEmailIsBusy(this@SignupActivity)
+                        showEmailIsBusy(this@SignActivity)
                         return@launch
                     }
 
@@ -103,7 +104,7 @@ class SignActivity : ActivityBase<ActivitySignupBinding>() {
                     password = secondFragment.getPassword()
                     confirm = secondFragment.getConfirm()
                     if (!isPasswordValid(password) or !isPasswordValid(confirm) or (password != confirm)) {
-                        showInvalidDataDialog(this@SignupActivity)
+                        showInvalidDataDialog(this@SignActivity)
                         return@launch
                     }
                 }
@@ -113,18 +114,18 @@ class SignActivity : ActivityBase<ActivitySignupBinding>() {
                         with(supabaseClient.auth) {
                             clearSession()
                             signUpWith(Email) {
-                                email = this@SignupActivity.email
-                                password = this@SignupActivity.password
+                                email = this@SignActivity.email
+                                password = this@SignActivity.password
                             }
                             val userInfo = UserInfo(retrieveUserForCurrentSession().id, firstName, secondName, email)
                             supabaseClient.postgrest.from(usersTableName).insert(userInfo)
                         }
 
-                        startActivity(Intent(this@SignupActivity, MainActivity::class.java))
+                        startActivity(Intent(this@SignActivity, MainActivity::class.java))
                         finish()
 
                     } catch (e: Exception) {
-                        AlertDialog.Builder(this@SignupActivity)
+                        AlertDialog.Builder(this@SignActivity)
                             .setTitle("Ошибка")
                             .setMessage(e.message)
                             .setPositiveButton("OK") { dialog, _ -> dialog.dismiss() }
@@ -152,12 +153,12 @@ class SignActivity : ActivityBase<ActivitySignupBinding>() {
 
         val clickableSpanLogin = object : ClickableSpan() {
             override fun onClick(widget: View) {
-                startActivity(Intent(this@SignupActivity, LoginActivity::class.java))
+                startActivity(Intent(this@SignActivity, LoginActivity::class.java))
                 finish()
             }
             override fun updateDrawState(ds: TextPaint) {
                 super.updateDrawState(ds)
-                ds.color = ContextCompat.getColor(this@SignupActivity, R.color.blue)
+                ds.color = ContextCompat.getColor(this@SignActivity, R.color.blue)
                 ds.isUnderlineText = false
             }
         }

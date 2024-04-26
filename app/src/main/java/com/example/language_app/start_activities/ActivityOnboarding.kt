@@ -1,4 +1,4 @@
-package com.example.language_app.StartActivities
+package com.example.language_app.start_activities
 
 import android.content.Intent
 import android.os.Bundle
@@ -11,20 +11,20 @@ import com.example.language_app.R
 import com.example.language_app.R.string.onboarding_next_button
 import com.example.language_app.R.string.onboarding_more_button
 import com.example.language_app.R.string.onboarding_choose_button
-import com.example.language_app.databinding.ActivityOnboardingBinding
-import com.example.language_app.databinding.ActivityOnboardingBinding.inflate
+import com.example.language_app.databinding.ActOnboardingMainBinding
+import com.example.language_app.databinding.ActOnboardingMainBinding.inflate
 
-class ActivityOnboarding : ActivityBase<ActivityOnboardingBinding>() {
+class ActivityOnboarding : ActivityBase<ActOnboardingMainBinding>() {
 
     private val onboardingFragments = listOf(
-        OnboardingFirstFragment(),
-        OnboardingSecondFragment(),
-        OnboardingThirdFragment(),
+        FirstFragmentOnboard(),
+        SecondFragmentOnboard(),
+        ThirdFragmentOnboard(),
     )
 
     private var currentFragment: Int = 0
 
-    override val screenBinding: ActivityOnboardingBinding by lazy {
+    override val screenBinding: ActOnboardingMainBinding by lazy {
         inflate(layoutInflater)
     }
 
@@ -38,7 +38,7 @@ class ActivityOnboarding : ActivityBase<ActivityOnboardingBinding>() {
 
         currentFragment = storage.getInt("OnboardingFragment")
         setUIById(currentFragment, btnText[currentFragment])
-        val adapter = OnboardingAdapter(this, onboardingFragments)
+        val adapter = WorkWithFragmentsOnboarding(this, onboardingFragments)
 
         with(screenBinding.vpOnboarding) {
             this.adapter = adapter
@@ -61,7 +61,7 @@ class ActivityOnboarding : ActivityBase<ActivityOnboardingBinding>() {
                 setUIById(currentFragment, btnText[currentFragment])
             } else {
                 storage.saveInt("OnboardingFragment", -1)
-                startActivity(Intent(this, LanguageActivity::class.java))
+                startActivity(Intent(this, ActivityLanguage::class.java))
                 finish()
             }
         }
@@ -69,7 +69,7 @@ class ActivityOnboarding : ActivityBase<ActivityOnboardingBinding>() {
         screenBinding.tvSkip.setOnClickListener {
             currentFragment = -1
             storage.saveInt("OnboardingFragment", currentFragment)
-            startActivity(Intent(this, LanguageActivity::class.java))
+            startActivity(Intent(this, ActivityLanguage::class.java))
             finish()
         }
 

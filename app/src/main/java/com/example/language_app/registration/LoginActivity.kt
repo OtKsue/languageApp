@@ -16,23 +16,23 @@ import com.example.language_app.base_activities.ActivityBase
 import com.example.language_app.databases.Initialization.Companion.storage
 import com.example.language_app.databases.Initialization.Companion.supabaseClient
 import com.example.language_app.R
-import com.example.language_app.databinding.ActivityLoginBinding
-import com.example.language_app.base_activities.isEmailValid
-import com.example.language_app.base_activities.isPasswordValid
+import com.example.language_app.databinding.ActLoginBinding
+import com.example.language_app.util.isEmailValid
+import com.example.language_app.util.isPasswordValid
 import com.example.language_app.language_selection.ActivityLanguage
 import com.example.language_app.base_activities.MainActivity
-import com.example.language_app.base_activities.showInvalidDataDialog
-import com.example.language_app.base_activities.showNoSignInDialog
-import com.example.language_app.account.signup.SignupActivity
+import com.example.language_app.util.showInvalidDataDialog
+import com.example.language_app.util.showNoSignInDialog
+import com.example.language_app.registration.SignActivity
 import io.github.jan.supabase.gotrue.auth
 import io.github.jan.supabase.gotrue.providers.builtin.Email
 import kotlinx.coroutines.launch
 import java.lang.Exception
 
-class LoginActivity : ActivityBase<ActivityLoginBinding>() {
+class LoginActivity : ActivityBase<ActLoginBinding>() {
 
-    override val screenBinding: ActivityLoginBinding by lazy {
-        ActivityLoginBinding.inflate(layoutInflater)
+    override val screenBinding: ActLoginBinding by lazy {
+        ActLoginBinding.inflate(layoutInflater)
     }
 
     private lateinit var email: String
@@ -53,7 +53,7 @@ class LoginActivity : ActivityBase<ActivityLoginBinding>() {
 
         val clickableSpanRegistration = object : ClickableSpan() {
             override fun onClick(widget: View) {
-                startActivity(Intent(this@LoginActivity, SignupActivity::class.java))
+                startActivity(Intent(this@LoginActivity, SignActivity::class.java))
                 finish()
             }
             override fun updateDrawState(ds: TextPaint) {
