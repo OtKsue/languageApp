@@ -12,9 +12,9 @@ import com.example.language_app.databases.User
 import com.example.language_app.databases.UserInfo
 import com.example.language_app.databinding.ActMainBinding
 import com.example.language_app.exercises.ex_audition
-import com.example.language_app.exercises.GameActivity
+import com.example.language_app.exercises.ex_text_words_mm
 import com.example.language_app.exercises.GuessActivity
-import com.example.language_app.exercises.TextPracticeActivity
+import com.example.language_app.exercises.ex_text_words
 import com.example.language_app.user_profile.UserProfileActivity
 import com.example.language_app.top_users.BoardOfLeaders
 import io.github.jan.supabase.gotrue.auth
@@ -70,7 +70,7 @@ class MainActivity : ActivityBase <ActMainBinding>() {
             }
 
             screenBinding.layoutTexting.setOnClickListener {
-                loadLanguagePreference(TextPracticeActivity::class.java, "Users_Information", Json.encodeToString(userInfo))
+                loadLanguagePreference(ex_text_words::class.java, "Users_Information", Json.encodeToString(userInfo))
             }
 
             screenBinding.layoutAudition.setOnClickListener {
@@ -78,7 +78,7 @@ class MainActivity : ActivityBase <ActMainBinding>() {
             }
 
             screenBinding.layoutGame.setOnClickListener {
-                loadLanguagePreference(GameActivity::class.java, "Users_Information", Json.encodeToString(userInfo))
+                loadLanguagePreference(ex_text_words_mm::class.java, "Users_Information", Json.encodeToString(userInfo))
             }
 
             setContentView(screenBinding.root)
