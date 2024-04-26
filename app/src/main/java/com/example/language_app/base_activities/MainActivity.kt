@@ -13,7 +13,7 @@ import com.example.language_app.databases.UserInfo
 import com.example.language_app.databinding.ActMainBinding
 import com.example.language_app.exercises.ex_audition
 import com.example.language_app.exercises.ex_text_words_mm
-import com.example.language_app.exercises.GuessActivity
+import com.example.language_app.exercises.ex_animals
 import com.example.language_app.exercises.ex_text_words
 import com.example.language_app.user_profile.UserProfileActivity
 import com.example.language_app.top_users.BoardOfLeaders
@@ -66,7 +66,7 @@ class MainActivity : ActivityBase <ActMainBinding>() {
             }
 
             screenBinding.layoutGuess.setOnClickListener {
-                loadLanguagePreference(GuessActivity::class.java, "Users_Information", Json.encodeToString(userInfo))
+                loadLanguagePreference(ex_animals::class.java, "Users_Information", Json.encodeToString(userInfo))
             }
 
             screenBinding.layoutTexting.setOnClickListener {

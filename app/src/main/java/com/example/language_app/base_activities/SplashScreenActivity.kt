@@ -18,7 +18,7 @@ class SplashScreenActivity : ActivityBase<ActSplashScreenBinding>() {
         inflate(layoutInflater)
     }
 
-    private var currentFragment: Int = 0,
+    private var currentFragment: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

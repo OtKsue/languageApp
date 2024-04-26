@@ -7,10 +7,6 @@ import android.content.Intent
 import android.net.ConnectivityManager
 
 class NetworkState : BroadcastReceiver() {
-    interface NetworkStateListener {
-        fun onNetworkConnected()
-        fun onNetworkDisconnected()
-    }
 
     private val listeners = mutableListOf<NetworkStateListener>()
 
