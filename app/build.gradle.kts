@@ -55,6 +55,12 @@ dependencies {
     //noinspection UseTomlInstead
     implementation("io.github.jan-tennert.supabase:realtime-kt")
 
+    implementation("io.github.jan-tennert.supabase:postgrest-kt")
+    implementation("io.github.jan-tennert.supabase:realtime-kt")
+    implementation("io.github.jan-tennert.supabase:storage-kt")
+
+    implementation("com.oginotihiro:cropview:1.0.0")
+
     implementation(libs.ktor.client.android)
 
     implementation(libs.kotlinx.serialization.json)

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/resize_background"
-    tools:context=".profile.ChangeImageActivity">
+    tools:context=".user_profile.ChangeImageActivity">
 
     <ImageView
         android:id="@+id/ivTopBlock"
@@ -41,6 +41,14 @@
         android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivTopBlock" />
+
+    <com.oginotihiro.cropview.CropView
+        android:id="@+id/cropView"
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_height="400dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnSetPhoto"

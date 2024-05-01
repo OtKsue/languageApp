@@ -3,7 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
+        android:name=".databases.Initialization"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -14,10 +17,44 @@
         android:theme="@style/Theme.LanguageApp"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".user_profile.UserProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".exercises.ex_text_words"
+            android:exported="false" />
+        <activity
+            android:name=".exercises.ex_audition"
+            android:exported="false" />
+        <activity
+            android:name=".exercises.ex_text_words_mm"
+            android:exported="false" />
+        <activity
+            android:name=".exercises.ex_animals"
+            android:exported="false" />
+        <activity
+            android:name=".base_activities.MainActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".registration.SignActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".registration.LoginActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".language_selection.ActivityLanguage"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".start_activities.ActivityOnboarding"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".base_activities.SplashScreenActivity"
             android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.LanguageApp">
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
