@@ -42,17 +42,17 @@ class MainActivity : ActivityBase<ActMainBinding>() {
             startActivity(intent)
         }
 
-        screenBinding.clWord.setOnClickListener {
+        screenBinding.exWord.setOnClickListener {
             val intent = Intent(this@MainActivity, ex_text_words::class.java)
             startActivity(intent)
         }
 
-        screenBinding.clMultiplayer.setOnClickListener {
+        screenBinding.exMultiplayer.setOnClickListener {
             val intent = Intent(this@MainActivity, ex_text_words_mm::class.java)
             startActivity(intent)
         }
 
-        screenBinding.clAudition.setOnClickListener {
+        screenBinding.exAudition.setOnClickListener {
             val intent = Intent(this@MainActivity, ex_audition::class.java)
             startActivity(intent)
         }
@@ -74,7 +74,7 @@ class MainActivity : ActivityBase<ActMainBinding>() {
                 Initialization.supabaseClient.auth.awaitInitialization()
                 val user = Initialization.supabaseClient.auth.currentUserOrNull()
                 val id = user?.id ?: ""
-                userInfo = Initialization.supabaseClient.postgrest.from("user_info").select {
+                userInfo = Initialization.supabaseClient.postgrest.from("Users_Information").select {
                     filter { eq("id", id) }
                 }.decodeSingle<UserInfo>()
 
@@ -89,7 +89,7 @@ class MainActivity : ActivityBase<ActMainBinding>() {
             }
 
 
-            val topUsers = Initialization.supabaseClient.postgrest.from("user_info").select {
+            val topUsers = Initialization.supabaseClient.postgrest.from("Users_Information").select {
                 order("points", Order.DESCENDING)
                 range(0, 2)
             }.decodeList<UserInfo>()

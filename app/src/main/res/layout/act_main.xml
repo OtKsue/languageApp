@@ -103,7 +103,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/clWord"
+        android:id="@+id/exWord"
         android:layout_width="153dp"
         android:layout_height="117dp"
         android:layout_marginEnd="25dp"
@@ -124,7 +124,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/clAudition"
+        android:id="@+id/exAudition"
         android:layout_width="153dp"
         android:layout_height="117dp"
         android:layout_marginStart="25dp"
@@ -146,13 +146,13 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/clMultiplayer"
+        android:id="@+id/exMultiplayer"
         android:layout_width="153dp"
         android:layout_height="117dp"
         android:layout_marginTop="17dp"
         android:layout_marginEnd="25dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/clWord">
+        app:layout_constraintTop_toBottomOf="@+id/exWord">
 
         <ImageView
             android:layout_width="match_parent"
