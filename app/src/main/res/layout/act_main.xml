@@ -81,44 +81,90 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rvLeaderBoard" />
 
-    <ImageView
-        android:id="@+id/layoutGuess"
-        android:background="@drawable/guess_task_background"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/exAnimal"
         android:layout_width="153dp"
         android:layout_height="117dp"
         android:layout_marginStart="25dp"
         android:layout_marginTop="9dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvExercisesTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/tvExercisesTitle">
 
-    <ImageView
-        android:id="@+id/layoutTexting"
-        android:background="@drawable/texting_task_background"
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/animal_ex_background" />
+
+        <TextView
+            style="@style/exerciseName"
+            android:text="@string/animal_exercise_button_text"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clWord"
         android:layout_width="153dp"
         android:layout_height="117dp"
-        android:layout_marginTop="9dp"
         android:layout_marginEnd="25dp"
+        android:layout_marginTop="9dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvExercisesTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/tvExercisesTitle">
 
-    <ImageView
-        android:id="@+id/layoutAudition"
-        android:background="@drawable/audition_task_background"
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/text_ex_background" />
+
+        <TextView
+            style="@style/exerciseName"
+            android:text="@string/word_exercise_button_text"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clAudition"
         android:layout_width="153dp"
         android:layout_height="117dp"
         android:layout_marginStart="25dp"
         android:layout_marginTop="17dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layoutGuess" />
+        app:layout_constraintTop_toBottomOf="@+id/exAnimal">
 
-    <ImageView
-        android:id="@+id/layoutGame"
-        android:background="@drawable/game_task_background"
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/audition_ex_background" />
+
+        <TextView
+            style="@style/exerciseName"
+            android:text="@string/audition_exercise_button_text"
+            tools:ignore="MissingConstraints"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clMultiplayer"
         android:layout_width="153dp"
         android:layout_height="117dp"
-        android:layout_marginEnd="25dp"
         android:layout_marginTop="17dp"
+        android:layout_marginEnd="25dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layoutTexting" />
+        app:layout_constraintTop_toBottomOf="@+id/clWord">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/test_mm_ex_background" />
+
+
+        <TextView
+            style="@style/exerciseName"
+            android:text="@string/multiplayer_exercise_button_text"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

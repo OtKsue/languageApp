@@ -1,7 +1,7 @@
 package com.example.language_app.databases
 
 import android.content.Context.MODE_PRIVATE
-import com.example.language_app.databases.Initialization
+
 class Base(languageApplication: Initialization) {
     private val sharedPref = languageApplication.getSharedPreferences("MyPrefs", MODE_PRIVATE)
     fun saveInt(key: String, value: Int) = with(sharedPref.edit()) {

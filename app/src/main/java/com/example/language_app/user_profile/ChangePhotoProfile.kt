@@ -46,10 +46,10 @@ class ChangeImageActivity : ActivityBase<ActChangePhotoBinding>() {
 
                 if (id != null) {
                     supabaseClient.storage
-                        .from("user_photos")
+                        .from("UsersPhotos")
                         .list(id)
                         .forEach { file ->
-                            supabaseClient.storage.from("user_photos")
+                            supabaseClient.storage.from("UsersPhotos")
                                 .delete("$id/${file.name}")
                         }
                 }
@@ -57,7 +57,7 @@ class ChangeImageActivity : ActivityBase<ActChangePhotoBinding>() {
                 val photoFileName =
                     "avatar_${Clock.System.now().toEpochMilliseconds()}.jpeg"
 
-                val path = supabaseClient.storage.from("user_photos")
+                val path = supabaseClient.storage.from("UsersPhotos")
                     .upload(
                         path = "${id}/$photoFileName",
                         data = byteArray,

@@ -22,6 +22,7 @@ abstract class ActivityBase<T: ViewBinding> : AppCompatActivity(), NetworkStateL
 
     private val networkReceiver = NetworkState()
     private var isInternetAvailable = true
+    protected var isShouldStart = true
     private val noConnectionBinding: ActNoConnectionBinding by lazy {
         inflate(layoutInflater)
     }

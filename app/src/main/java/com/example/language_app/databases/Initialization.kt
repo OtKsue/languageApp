@@ -3,7 +3,6 @@ package com.example.language_app.databases
 import android.app.Application
 import com.example.language_app.supabase_info.key
 import com.example.language_app.supabase_info.url
-import com.example.language_app.databases.Base
 import io.github.jan.supabase.SupabaseClient
 import io.github.jan.supabase.createSupabaseClient
 import io.github.jan.supabase.exceptions.RestException
