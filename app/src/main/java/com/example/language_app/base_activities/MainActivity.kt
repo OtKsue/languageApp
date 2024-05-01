@@ -15,7 +15,7 @@ import com.example.language_app.exercises.ex_animals
 import com.example.language_app.exercises.ex_audition
 import com.example.language_app.exercises.ex_text_words_mm
 import com.example.language_app.exercises.ex_text_words
-import com.example.language_app.top_users.ViewHolder
+import com.example.language_app.top_users.BoardOfLeaders
 import com.example.language_app.user_profile.UserProfileActivity
 import io.github.jan.supabase.gotrue.auth
 import io.github.jan.supabase.postgrest.postgrest
@@ -63,7 +63,7 @@ class MainActivity : ActivityBase<ActMainBinding>() {
         }
 
         screenBinding.rvLeaderBoard.layoutManager = LinearLayoutManager(this@MainActivity)
-        screenBinding.rvLeaderBoard.adapter = ViewHolder(userItems)
+        screenBinding.rvLeaderBoard.adapter = BoardOfLeaders(userItems)
     }
 
     override fun onStart() {
