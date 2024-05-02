@@ -25,7 +25,7 @@ import kotlinx.datetime.Clock
 import java.io.ByteArrayOutputStream
 import java.io.File
 
-class ChangeImageActivity : ActivityBase<ActChangePhotoBinding>() {
+class ChangePhotoProfile : ActivityBase<ActChangePhotoBinding>() {
 
     private val cropView by lazy { findViewById<View>(com.example.language_app.R.id.cropView) as CropView }
 
