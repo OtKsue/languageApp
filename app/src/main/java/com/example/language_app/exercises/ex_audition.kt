@@ -166,7 +166,7 @@ class ex_audition : ActivityBase<ActAuditionBinding>() {
 
     private suspend fun getNewAudition(): Audition {
         val exercise: Audition = try {
-            Initialization.supabaseClient.postgrest.from("random_guess_audition").select {
+            Initialization.supabaseClient.postgrest.from("exercises_audition").select {
                 limit(1)
             }.decodeSingle<Audition>()
         } catch (e: Exception) {
