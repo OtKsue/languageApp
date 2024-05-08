@@ -71,9 +71,9 @@
     <string name="word_exercise_title">Сөз практикасы</string>
     <string name="word_exercise_check">Тексеру</string>
     <string name="word_exercise_next">Келесі</string>
-    <string name="bottom_sheet_message">Суретті қалай алғыңыз келеді?</string>
-    <string name="sheet_choose_image">Суретті таңдаңыз</string>
-    <string name="sheet_choose_photo">Суретке түсіру</string>
+    <string name="bottom_photo_select_message">Суретті қалай алғыңыз келеді?</string>
+    <string name="photo_select_choose_image">Суретті таңдаңыз</string>
+    <string name="photo_select_choose_photo">Суретке түсіру</string>
     <string name="multiplayer_player_label">Сіз</string>
     <string name="audition_exercise_title">Тыңдау</string>
     <string name="audition_exercise_welcome">Түймені басып, осы сөзді айтыңыз. Біздің қызмет сіздің айтылуыңызды тексереді</string>

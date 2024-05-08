@@ -69,7 +69,7 @@ class ex_text_words : ActivityBase<ActWordsBinding>() {
             }
         }
 
-        screenBinding.ivBack.setOnClickListener {
+        screenBinding.btnBack.setOnClickListener {
             finish()
         }
 

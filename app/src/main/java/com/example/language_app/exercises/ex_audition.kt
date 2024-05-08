@@ -140,7 +140,7 @@ class ex_audition : ActivityBase<ActAuditionBinding>() {
             }
         }
 
-        screenBinding.ivBack.setOnClickListener {
+        screenBinding.btnBack.setOnClickListener {
             finish()
         }
     }

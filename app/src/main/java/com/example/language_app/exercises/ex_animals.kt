@@ -52,7 +52,7 @@ class ex_animals : ActivityBase<ActAnimalBinding>() {
             }
         }
 
-        screenBinding.ivBack.setOnClickListener {
+        screenBinding.btnBack.setOnClickListener {
             finish()
         }
 

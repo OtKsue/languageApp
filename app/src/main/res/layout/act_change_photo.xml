@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/resize_background"
-    tools:context=".user_profile.ChangeImageActivity">
+    tools:context=".user_profile.ChangePhotoProfile">
 
     <ImageView
         android:id="@+id/ivTopBlock"
@@ -60,7 +60,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/clBottomSheet"
+        android:id="@+id/clBottomPhotoSelect"
         android:background="@color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -70,7 +70,7 @@
         android:paddingBottom="20dp">
 
         <TextView
-            android:id="@+id/tvBottomSheetMessage"
+            android:id="@+id/tvBottomPhotoSelectMessage"
             style="@style/h5Medium"
             android:layout_width="327dp"
             android:layout_height="wrap_content"
@@ -78,30 +78,30 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="24dp"
             android:gravity="center_horizontal"
-            android:text="@string/bottom_sheet_message"
+            android:text="@string/bottom_photo_select_message"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/btnMemoryChoose"
+            android:id="@+id/btnMemorySelection"
             style="@style/selectBlueButton"
             android:layout_height="56dp"
             android:layout_marginTop="24dp"
-            android:text="@string/sheet_choose_image"
+            android:text="@string/photo_select_choose_image"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvBottomSheetMessage" />
+            app:layout_constraintTop_toBottomOf="@+id/tvBottomPhotoSelectMessage" />
 
         <Button
-            android:id="@+id/btnCameraChoose"
+            android:id="@+id/btnCameraSelection"
             style="@style/selectBlueButton"
             android:layout_height="56dp"
             android:layout_marginTop="16dp"
-            android:text="@string/sheet_choose_photo"
+            android:text="@string/photo_select_choose_photo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnMemoryChoose" />
+            app:layout_constraintTop_toBottomOf="@+id/btnMemorySelection" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -71,9 +71,9 @@
     <string name="word_exercise_title">Практыка слоў</string>
     <string name="word_exercise_check">Праверыць</string>
     <string name="word_exercise_next">Далей</string>
-    <string name="bottom_sheet_message">Як вы хочаце атрымаць малюнак?</string>
-    <string name="sheet_choose_image">Выбраць малюнак</string>
-    <string name="sheet_choose_photo">Зрабіць фота</string>
+    <string name="bottom_photo_select_message">Як вы хочаце атрымаць малюнак?</string>
+    <string name="photo_select_choose_image">Выбраць малюнак</string>
+    <string name="photo_select_choose_photo">Зрабіць фота</string>
     <string name="multiplayer_player_label">Вы</string>
     <string name="audition_exercise_title">Праслухоўванне</string>
     <string name="audition_exercise_welcome">Калі ласка, націсніце на кнопку і прамоўце гэтае слова. Наш сэрвіс праверыць ваша вымаўленне</string>

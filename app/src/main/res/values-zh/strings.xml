@@ -71,9 +71,9 @@
     <string name="word_exercise_title">单词的练习</string>
     <string name="word_exercise_check">支票</string>
     <string name="word_exercise_next">进一步</string>
-    <string name="bottom_sheet_message">你想如何获得图像？</string>
-    <string name="sheet_choose_image">选择图像</string>
-    <string name="sheet_choose_photo">拍张照片</string>
+    <string name="bottom_photo_select_message">你想如何获得图像？</string>
+    <string name="photo_select_choose_image">选择图像</string>
+    <string name="photo_select_choose_photo">拍张照片</string>
     <string name="multiplayer_player_label">你</string>
     <string name="audition_exercise_title">倾听</string>
     <string name="audition_exercise_welcome">请按下按钮并说出这个词。 我们的服务将检查您的发音</string>

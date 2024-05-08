@@ -40,7 +40,7 @@ class LoginActivity : ActivityBase<ActLoginBinding>() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        screenBinding.ivBack.setOnClickListener {
+        screenBinding.btnBack.setOnClickListener {
             startActivity(Intent(this, ActivityLanguage::class.java))
             finish()
         }

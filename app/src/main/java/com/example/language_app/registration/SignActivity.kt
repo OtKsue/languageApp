@@ -67,7 +67,7 @@ class SignActivity : ActivityBase<ActSignupBinding>() {
 
         val adapter = SignFragmentsWork(this, fragList)
 
-        screenBinding.ivBack.setOnClickListener {
+        screenBinding.btnBack.setOnClickListener {
             currentFragment--
             if (currentFragment < 0) {
                 startActivity(Intent(this, LoginActivity::class.java))
