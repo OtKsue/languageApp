@@ -29,12 +29,12 @@ class ActivityLanguage : ActivityBase<ActLanguageChoiceBinding>() {
             DataLanguageCapture("Kazakh"),
         )
 
-        screenBinding.rvLanguageButtons.layoutManager = LinearLayoutManager(this)
-        screenBinding.rvLanguageButtons.adapter = WorkActLanguage(languages) {
+        screenBinding.RVLanguageBtns.layoutManager = LinearLayoutManager(this)
+        screenBinding.RVLanguageBtns.adapter = WorkActLanguage(languages) {
             languages.forEachIndexed { index, item ->
                 item.isSelectActivity = index == it
             }
-            screenBinding.rvLanguageButtons.adapter?.notifyDataSetChanged()
+            screenBinding.RVLanguageBtns.adapter?.notifyDataSetChanged()
         }
 
         screenBinding.btnChooseLanguage.setOnClickListener {

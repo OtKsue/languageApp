@@ -23,7 +23,6 @@ import com.example.language_app.language_selection.ActivityLanguage
 import com.example.language_app.base_activities.MainActivity
 import com.example.language_app.util.showInvalidDataDialog
 import com.example.language_app.util.showNoSignInDialog
-import com.example.language_app.registration.SignActivity
 import io.github.jan.supabase.gotrue.auth
 import io.github.jan.supabase.gotrue.providers.builtin.Email
 import kotlinx.coroutines.launch
@@ -92,7 +91,7 @@ class LoginActivity : ActivityBase<ActLoginBinding>() {
 
         screenBinding.btnLogin.setOnClickListener {
             email = screenBinding.inputEmailEditText.text.toString()
-            password = screenBinding.inputPasswordEditText.text.toString()
+            password = screenBinding.etInputPassword.text.toString()
 
             if (!isEmailValid(email) or !isPasswordValid(password)) {
                 showInvalidDataDialog(this)
@@ -103,7 +102,7 @@ class LoginActivity : ActivityBase<ActLoginBinding>() {
                 try {
                     supabaseClient.auth.signInWith(Email) {
                         email = screenBinding.inputEmailEditText.text.toString()
-                        password = screenBinding.inputPasswordEditText.text.toString()
+                        password = screenBinding.etInputPassword.text.toString()
                     }
 
                     val session = supabaseClient.auth.currentSessionOrNull()

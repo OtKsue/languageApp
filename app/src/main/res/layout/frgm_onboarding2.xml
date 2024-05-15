@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="140dp"
 
-        android:background="@drawable/image_onboarding_2"
+        android:background="@drawable/img_onboarding_2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -32,19 +32,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="@string/onboarding2_title"
+            android:text="@string/onboarding_title2"
             android:gravity="center_horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
         <TextView
             style="@style/bodyMedium"
-            android:id="@+id/tvOnboardingParagraph"
+            android:id="@+id/tvOnboardingPrg"
             android:layout_marginTop="8dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="@string/onboarding2_paragraph"
+            android:text="@string/onboarding_prg2"
             android:gravity="center_horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

@@ -4,7 +4,7 @@ import android.os.Bundle
 import com.example.language_app.base_activities.ActivityBase
 import com.example.language_app.databinding.ActTextWordsMpBinding
 
-class ex_text_words_mm : ActivityBase<ActTextWordsMpBinding>() {
+class ExTextWordsMM : ActivityBase<ActTextWordsMpBinding>() {
 
     override val screenBinding: ActTextWordsMpBinding by lazy {
         ActTextWordsMpBinding.inflate(layoutInflater)

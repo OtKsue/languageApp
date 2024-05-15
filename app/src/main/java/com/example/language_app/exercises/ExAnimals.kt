@@ -16,9 +16,9 @@ import io.github.jan.supabase.postgrest.from
 import io.github.jan.supabase.postgrest.postgrest
 import kotlinx.coroutines.launch
 
-class ex_animals : ActivityBase<ActAnimalBinding>() {
+class ExAnimals : ActivityBase<ActAnimalBinding>() {
 
-    private val gameManager = ex_animal_work()
+    private val gameManager = ExAnimalWork()
 
     private lateinit var currentAnimal: Animal
 
@@ -47,7 +47,7 @@ class ex_animals : ActivityBase<ActAnimalBinding>() {
                     setSuccessUI()
                 }
             } else {
-                gameManager.resetStreak()
+                gameManager.resetStripe()
                 setWrongUI()
             }
         }
@@ -74,11 +74,11 @@ class ex_animals : ActivityBase<ActAnimalBinding>() {
         screenBinding.btnCheckAnimal.visibility = View.GONE
         screenBinding.animalTextInputLayout.visibility = View.GONE
         screenBinding.tvResultIcon.text = getString(R.string.animal_good_answer_icon)
-        screenBinding.tvAnimalMessage.text = getString(R.string.animal_exercise_good)
+        screenBinding.tvAnimalMessage.text = getString(R.string.animal_good)
         screenBinding.btnAnimalNext.visibility = View.VISIBLE
         screenBinding.tvResultIcon.visibility = View.VISIBLE
         screenBinding.tvAnimalMessage.visibility = View.VISIBLE
-        screenBinding.ivTopBlock.setBackgroundColor(getColor(R.color.green))
+        screenBinding.ivUpperBlock.setBackgroundColor(getColor(R.color.green))
     }
 
     private fun setWrongUI() {
@@ -87,11 +87,11 @@ class ex_animals : ActivityBase<ActAnimalBinding>() {
         screenBinding.btnCheckAnimal.visibility = View.GONE
         screenBinding.animalTextInputLayout.visibility = View.GONE
         screenBinding.tvResultIcon.text = getString(R.string.animal_bad_answer_icon)
-        screenBinding.tvAnimalMessage.text = getString(R.string.animal_exercise_bad, currentAnimal.correctAnswer)
+        screenBinding.tvAnimalMessage.text = getString(R.string.animal_wrong, currentAnimal.correctAnswer)
         screenBinding.btnAnimalNext.visibility = View.VISIBLE
         screenBinding.tvResultIcon.visibility = View.VISIBLE
         screenBinding.tvAnimalMessage.visibility = View.VISIBLE
-        screenBinding.ivTopBlock.setBackgroundColor(getColor(R.color.red))
+        screenBinding.ivUpperBlock.setBackgroundColor(getColor(R.color.red))
         screenBinding.btnAnimalAgain.visibility = View.VISIBLE
     }
 
@@ -99,7 +99,7 @@ class ex_animals : ActivityBase<ActAnimalBinding>() {
         screenBinding.btnAnimalNext.visibility = View.GONE
         screenBinding.tvResultIcon.visibility = View.GONE
         screenBinding.tvAnimalMessage.visibility = View.GONE
-        screenBinding.ivTopBlock.setBackgroundColor(getColor(R.color.deep_blue))
+        screenBinding.ivUpperBlock.setBackgroundColor(getColor(R.color.deep_blue))
         screenBinding.btnAnimalAgain.visibility = View.GONE
         screenBinding.ivAnimalPhoto.visibility = View.VISIBLE
         screenBinding.tvInputTitle.visibility = View.VISIBLE

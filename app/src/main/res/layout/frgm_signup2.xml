@@ -8,36 +8,36 @@
 
 
     <TextView
-        android:id="@+id/tvSignupTitle"
+        android:id="@+id/tvSignTitle"
         style="@style/h5Medium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/signup_welcome_password"
+        android:text="@string/sign_welcome_password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/clPassword"
+        android:id="@+id/CLPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvSignupTitle">
+        app:layout_constraintTop_toBottomOf="@+id/tvSignTitle">
 
         <TextView
             android:id="@+id/tvPasswordTitle"
             style="@style/bodyMediumSmallTitles"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/signup_password_title"
+            android:text="@string/sign_password_title"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/passwordTextInputLayout"
+            android:id="@+id/TILpassword"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -49,11 +49,11 @@
             app:layout_constraintTop_toBottomOf="@+id/tvPasswordTitle">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/inputPasswordEditText"
-                style="@style/textInput"
+                android:id="@+id/etInputPassword"
+                style="@style/TIETEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/signup_password_hint"
+                android:hint="@string/sign_password_hint"
                 android:inputType="textPassword" />
 
 
@@ -71,14 +71,14 @@
         android:layout_marginEnd="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/clPassword">
+        app:layout_constraintTop_toBottomOf="@id/CLPassword">
 
         <TextView
             android:id="@+id/tvConfirmTitle"
             style="@style/bodyMediumSmallTitles"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/signup_confirm_title"
+            android:text="@string/sign_confirm_title"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -96,10 +96,10 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/inputConfirmEditText"
-                style="@style/textInput"
+                style="@style/TIETEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/signup_confirm_hint"
+                android:hint="@string/sign_confirm_hint"
                 android:inputType="textPassword" />
 
 

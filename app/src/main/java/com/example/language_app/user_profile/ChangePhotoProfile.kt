@@ -74,12 +74,12 @@ class ChangePhotoProfile : ActivityBase<ActChangePhotoBinding>() {
 
         screenBinding.btnMemorySelection.setOnClickListener {
             startImagePicker()
-            screenBinding.clBottomPhotoSelect.visibility = View.GONE
+            screenBinding.CLBottomPhotoSelect.visibility = View.GONE
         }
 
         screenBinding.btnCameraSelection.setOnClickListener {
             requestCameraPermission()
-            screenBinding.clBottomPhotoSelect.visibility = View.GONE
+            screenBinding.CLBottomPhotoSelect.visibility = View.GONE
         }
 
         setContentView(screenBinding.root)

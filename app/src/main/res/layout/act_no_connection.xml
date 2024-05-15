@@ -6,7 +6,7 @@
     android:background="?attr/colorOnBackground">
 
     <ImageView
-        android:id="@+id/ivTopBlock"
+        android:id="@+id/ivUpperBlock"
         android:layout_width="match_parent"
         android:layout_height="92dp"
         android:background="@color/deep_blue"
@@ -19,13 +19,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="150dp"
-        android:text="@string/sad_connection_smile"
+        android:text="@string/sad_smile"
         android:textSize="150sp"
         android:fontFamily="@font/fredoka_regular"
         android:textColor="?attr/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivTopBlock" />
+        app:layout_constraintTop_toBottomOf="@+id/ivUpperBlock" />
 
     <TextView
         android:id="@+id/tvConnectionMessage"
@@ -42,7 +42,7 @@
 
     <Button
         android:id="@+id/btnCheckConnection"
-        style="@style/selectBlueButton"
+        style="@style/slcBlueButton"
         android:layout_marginBottom="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

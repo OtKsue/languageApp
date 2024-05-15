@@ -16,17 +16,16 @@ import androidx.viewpager2.widget.ViewPager2
 import com.example.language_app.base_activities.ActivityBase
 import com.example.language_app.databases.Initialization.Companion.supabaseClient
 import com.example.language_app.R
-import com.example.language_app.R.string.signup_before_span
-import com.example.language_app.R.string.signup_complete
-import com.example.language_app.R.string.signup_continue
-import com.example.language_app.R.string.signup_span
+import com.example.language_app.R.string.sign_before_span
+import com.example.language_app.R.string.sign_complete
+import com.example.language_app.R.string.sign_continue
+import com.example.language_app.R.string.sign_span
 import com.example.language_app.databases.UserInfo
 import com.example.language_app.databinding.ActSignupBinding
 import com.example.language_app.databinding.ActSignupBinding.inflate
 import com.example.language_app.util.isEmailValid
 import com.example.language_app.util.isNameValid
 import com.example.language_app.util.isPasswordValid
-import com.example.language_app.registration.LoginActivity
 import com.example.language_app.base_activities.MainActivity
 import com.example.language_app.util.showEmailIsBusy
 import com.example.language_app.util.showInvalidDataDialog
@@ -61,8 +60,8 @@ class SignActivity : ActivityBase<ActSignupBinding>() {
         super.onCreate(savedInstanceState)
 
         val btnText = listOf(
-            getString(signup_continue),
-            getString(signup_complete),
+            getString(sign_continue),
+            getString(sign_complete),
         )
 
         val adapter = SignFragmentsWork(this, fragList)
@@ -73,11 +72,11 @@ class SignActivity : ActivityBase<ActSignupBinding>() {
                 startActivity(Intent(this, LoginActivity::class.java))
                 finish()
             } else {
-                screenBinding.vpSignup.currentItem = currentFragment
+                screenBinding.vpSign.currentItem = currentFragment
             }
         }
 
-        screenBinding.btnSignup.setOnClickListener {
+        screenBinding.btnSign.setOnClickListener {
             lifecycleScope.launch {
                 val firstFragment = adapter.getFragmentByPosition(0) as FirstSignFragment
                 val secondFragment = adapter.getFragmentByPosition(1) as SecSignFragment
@@ -126,26 +125,26 @@ class SignActivity : ActivityBase<ActSignupBinding>() {
 
                     } catch (e: Exception) {
                         AlertDialog.Builder(this@SignActivity)
-                            .setTitle("Ошибка")
+                            .setTitle("Something wrong")
                             .setMessage(e.message)
                             .setPositiveButton("OK") { dialog, _ -> dialog.dismiss() }
                             .show()
                     }
                 } else {
-                    screenBinding.vpSignup.currentItem = currentFragment
+                    screenBinding.vpSign.currentItem = currentFragment
                 }
             }
         }
 
-        screenBinding.vpSignup.registerOnPageChangeCallback(object: ViewPager2.OnPageChangeCallback() {
+        screenBinding.vpSign.registerOnPageChangeCallback(object: ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
                 currentFragment = position
-                screenBinding.btnSignup.text = btnText[currentFragment]
+                screenBinding.btnSign.text = btnText[currentFragment]
             }
         })
 
-        with(screenBinding.vpSignup) {
+        with(screenBinding.vpSign) {
             isUserInputEnabled = false
             this.adapter = adapter
             currentItem = currentFragment
@@ -163,8 +162,8 @@ class SignActivity : ActivityBase<ActSignupBinding>() {
             }
         }
 
-        val loginBeforeSpan = getString(signup_before_span)
-        val loginSpan = getString(signup_span)
+        val loginBeforeSpan = getString(sign_before_span)
+        val loginSpan = getString(sign_span)
         val spannableLogin = SpannableString(loginSpan)
         spannableLogin.setSpan(
             clickableSpanLogin,
@@ -177,7 +176,7 @@ class SignActivity : ActivityBase<ActSignupBinding>() {
             .append(" ")
             .append(spannableLogin)
 
-        with(screenBinding.tvSignupToLogin) {
+        with(screenBinding.tvSignToLogin) {
             text = combinedLoginText
             movementMethod = getInstance()
         }

@@ -7,7 +7,7 @@
     android:paddingBottom="12dp">
 
     <Button
-        style="@style/h5MediumLanguageButton"
+        style="@style/h5MediumLanguageBtn"
         android:background="@drawable/rounded_language_background"
         app:backgroundTint="@null"
         android:id="@+id/btnLanguage"

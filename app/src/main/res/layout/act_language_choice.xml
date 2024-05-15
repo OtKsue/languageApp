@@ -10,7 +10,7 @@
     tools:context=".language_selection.ActivityLanguage">
 
     <ImageView
-        android:id="@+id/ivTopBlock"
+        android:id="@+id/ivUpperBlock"
         android:layout_width="match_parent"
         android:layout_height="92dp"
         android:background="@color/deep_blue"
@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvLoginHeader"
+        android:id="@+id/tvLoginHead"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
@@ -28,9 +28,9 @@
         android:text="@string/language_select_title"
         android:textColor="#FFFFFF"
         android:textSize="17sp"
-        app:layout_constraintBottom_toBottomOf="@+id/ivTopBlock"
-        app:layout_constraintEnd_toEndOf="@+id/ivTopBlock"
-        app:layout_constraintStart_toStartOf="@+id/ivTopBlock" />
+        app:layout_constraintBottom_toBottomOf="@+id/ivUpperBlock"
+        app:layout_constraintEnd_toEndOf="@+id/ivUpperBlock"
+        app:layout_constraintStart_toStartOf="@+id/ivUpperBlock" />
 
 
     <TextView
@@ -45,7 +45,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvLanguageButtons"
+        android:id="@+id/RVLanguageBtns"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="16dp"
@@ -58,11 +58,11 @@
 
     <Button
         android:id="@+id/btnChooseLanguage"
-        style="@style/selectBlueButton"
+        style="@style/slcBlueButton"
         android:layout_marginBottom="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:text="@string/language_select_button" />
+        android:text="@string/language_select_btn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

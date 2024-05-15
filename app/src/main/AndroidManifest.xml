@@ -20,16 +20,16 @@
             android:name=".user_profile.UserProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".exercises.ex_text_words"
+            android:name=".exercises.ExTextWords"
             android:exported="false" />
         <activity
-            android:name=".exercises.ex_audition"
+            android:name=".exercises.ExAudition"
             android:exported="false" />
         <activity
-            android:name=".exercises.ex_text_words_mm"
+            android:name=".exercises.ExTextWordsMM"
             android:exported="false" />
         <activity
-            android:name=".exercises.ex_animals"
+            android:name=".exercises.ExAnimals"
             android:exported="false" />
         <activity
             android:name=".base_activities.MainActivity"

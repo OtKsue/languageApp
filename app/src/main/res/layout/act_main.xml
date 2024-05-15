@@ -8,13 +8,14 @@
     tools:context=".base_activities.MainActivity">
 
     <ImageView
-        android:id="@+id/ivTopBlock"
+        android:id="@+id/ivUpperBlock"
         android:layout_width="match_parent"
         android:layout_height="175dp"
         android:background="@color/deep_blue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:importantForAccessibility="no" />
 
     <ImageView
         android:id="@+id/ivUserPhoto"
@@ -23,8 +24,9 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="50dp"
         android:elevation="2dp"
-        app:layout_constraintStart_toStartOf="@+id/ivTopBlock"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/ivUpperBlock"
+        app:layout_constraintTop_toTopOf="parent"
+        android:importantForAccessibility="no" />
 
     <TextView
         android:id="@+id/tvUserWelcome"
@@ -51,7 +53,7 @@
         android:text="@string/main_activity_motivation" />
 
     <TextView
-        android:id="@+id/tvLeaderBoardTitle"
+        android:id="@+id/tvTopUsers"
         style="@style/h6Medium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -59,19 +61,19 @@
         android:layout_marginTop="11dp"
         android:text="@string/main_leaderboard_title"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivTopBlock" />
+        app:layout_constraintTop_toBottomOf="@+id/ivUpperBlock" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvLeaderBoard"
+        android:id="@+id/rvTopUsers"
         android:layout_width="wrap_content"
         android:layout_height="212dp"
         android:layout_marginTop="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvLeaderBoardTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/tvTopUsers" />
 
     <TextView
-        android:id="@+id/tvExercisesTitle"
+        android:id="@+id/tvExsTitle"
         style="@style/h6Medium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -79,7 +81,7 @@
         android:layout_marginTop="1dp"
         android:text="@string/main_exercises_title"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rvLeaderBoard" />
+        app:layout_constraintTop_toBottomOf="@+id/rvTopUsers" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/exAnimal"
@@ -88,16 +90,17 @@
         android:layout_marginStart="25dp"
         android:layout_marginTop="9dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvExercisesTitle">
+        app:layout_constraintTop_toBottomOf="@+id/tvExsTitle">
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/animal_ex_background" />
+            android:background="@drawable/animal_ex_background"
+            android:importantForAccessibility="no" />
 
         <TextView
             style="@style/exerciseName"
-            android:text="@string/animal_exercise_button_text"
+            android:text="@string/animal_btn_text"
             tools:ignore="MissingConstraints" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -109,16 +112,17 @@
         android:layout_marginEnd="25dp"
         android:layout_marginTop="9dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvExercisesTitle">
+        app:layout_constraintTop_toBottomOf="@+id/tvExsTitle">
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/text_ex_background" />
+            android:background="@drawable/text_ex_background"
+            android:importantForAccessibility="no" />
 
         <TextView
             style="@style/exerciseName"
-            android:text="@string/word_exercise_button_text"
+            android:text="@string/word_btn_text"
             tools:ignore="MissingConstraints" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -136,11 +140,12 @@
             android:id="@+id/imageView2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/audition_ex_background" />
+            android:background="@drawable/audition_ex_background"
+            android:importantForAccessibility="no" />
 
         <TextView
             style="@style/exerciseName"
-            android:text="@string/audition_exercise_button_text"
+            android:text="@string/audition_btn_text"
             tools:ignore="MissingConstraints"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -162,7 +167,7 @@
 
         <TextView
             style="@style/exerciseName"
-            android:text="@string/multiplayer_exercise_button_text"
+            android:text="@string/multiplayer_btn_text"
             tools:ignore="MissingConstraints" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

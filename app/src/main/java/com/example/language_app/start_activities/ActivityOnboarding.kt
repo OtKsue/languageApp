@@ -8,9 +8,9 @@ import com.example.language_app.base_activities.ActivityBase
 import com.example.language_app.databases.Initialization.Companion.storage
 import com.example.language_app.language_selection.ActivityLanguage
 import com.example.language_app.R
-import com.example.language_app.R.string.onboarding_next_button
-import com.example.language_app.R.string.onboarding_more_button
-import com.example.language_app.R.string.onboarding_choose_button
+import com.example.language_app.R.string.onboarding_next_btn
+import com.example.language_app.R.string.onboarding_more_btn
+import com.example.language_app.R.string.onboarding_select_btn
 import com.example.language_app.databinding.ActOnboardingMainBinding
 import com.example.language_app.databinding.ActOnboardingMainBinding.inflate
 
@@ -31,9 +31,9 @@ class ActivityOnboarding : ActivityBase<ActOnboardingMainBinding>() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val btnText = listOf(
-            getString(onboarding_next_button),
-            getString(onboarding_more_button),
-            getString(onboarding_choose_button),
+            getString(onboarding_next_btn),
+            getString(onboarding_more_btn),
+            getString(onboarding_select_btn),
         )
 
         currentFragment = storage.getInt("OnboardingFragment")

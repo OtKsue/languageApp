@@ -15,11 +15,11 @@
         android:background="@drawable/back_icon"
         android:layout_marginBottom="20dp"
         android:layout_marginStart="24dp"
-        app:layout_constraintBottom_toBottomOf="@+id/ivTopBlock"
-        app:layout_constraintStart_toStartOf="@+id/ivTopBlock" />
+        app:layout_constraintBottom_toBottomOf="@+id/ivUpperBlock"
+        app:layout_constraintStart_toStartOf="@+id/ivUpperBlock" />
 
     <ImageView
-        android:id="@+id/ivTopBlock"
+        android:id="@+id/ivUpperBlock"
         android:layout_width="match_parent"
         android:layout_height="92dp"
         android:background="@color/deep_blue"
@@ -28,31 +28,31 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvSignupHeader"
+        android:id="@+id/tvSignHead"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         android:fontFamily="@font/fredoka_medium_regular"
         android:gravity="center_horizontal"
-        android:text="@string/signup_header"
+        android:text="@string/sign_header"
         android:textColor="#FFFFFF"
         android:textSize="17sp"
-        app:layout_constraintBottom_toBottomOf="@+id/ivTopBlock"
-        app:layout_constraintEnd_toEndOf="@+id/ivTopBlock"
-        app:layout_constraintStart_toStartOf="@+id/ivTopBlock" />
+        app:layout_constraintBottom_toBottomOf="@+id/ivUpperBlock"
+        app:layout_constraintEnd_toEndOf="@+id/ivUpperBlock"
+        app:layout_constraintStart_toStartOf="@+id/ivUpperBlock" />
 
 
     <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/vpSignup"
+        android:id="@+id/vpSign"
         android:layout_marginTop="40dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivTopBlock" />
+        app:layout_constraintTop_toBottomOf="@+id/ivUpperBlock" />
 
     <TextView
-        android:id="@+id/tvSignupToLogin"
+        android:id="@+id/tvSignToLogin"
         style="@style/textActivity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -63,10 +63,10 @@
         tools:text="Already you member? Login" />
 
     <Button
-        android:id="@+id/btnSignup"
-        style="@style/selectBlueButton"
+        android:id="@+id/btnSign"
+        style="@style/slcBlueButton"
         android:layout_marginBottom="24dp"
-        app:layout_constraintBottom_toTopOf="@+id/tvSignupToLogin"
+        app:layout_constraintBottom_toTopOf="@+id/tvSignToLogin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:text="Signup" />

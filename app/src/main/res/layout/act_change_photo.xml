@@ -9,7 +9,7 @@
     tools:context=".user_profile.ChangePhotoProfile">
 
     <ImageView
-        android:id="@+id/ivTopBlock"
+        android:id="@+id/ivUpperBlock"
         android:layout_width="match_parent"
         android:layout_height="92dp"
         android:background="@color/deep_blue"
@@ -27,8 +27,8 @@
         android:gravity="center_horizontal"
         android:text="@string/resize_photo_title"
         android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/ivTopBlock"
-        app:layout_constraintStart_toStartOf="@+id/ivTopBlock" />
+        app:layout_constraintBottom_toBottomOf="@+id/ivUpperBlock"
+        app:layout_constraintStart_toStartOf="@+id/ivUpperBlock" />
 
     <TextView
         android:id="@+id/tvResizeMessage"
@@ -40,7 +40,7 @@
         android:text="@string/resize_photo_message"
         android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivTopBlock" />
+        app:layout_constraintTop_toBottomOf="@+id/ivUpperBlock" />
 
     <com.oginotihiro.cropview.CropView
         android:id="@+id/cropView"
@@ -52,7 +52,7 @@
 
     <Button
         android:id="@+id/btnSetPhoto"
-        style="@style/selectBlueButton"
+        style="@style/slcBlueButton"
         android:text="@string/resize_photo_button"
         android:layout_marginBottom="28dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -60,7 +60,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/clBottomPhotoSelect"
+        android:id="@+id/CLBottomPhotoSelect"
         android:background="@color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -85,7 +85,7 @@
 
         <Button
             android:id="@+id/btnMemorySelection"
-            style="@style/selectBlueButton"
+            style="@style/slcBlueButton"
             android:layout_height="56dp"
             android:layout_marginTop="24dp"
             android:text="@string/photo_select_choose_image"
@@ -95,7 +95,7 @@
 
         <Button
             android:id="@+id/btnCameraSelection"
-            style="@style/selectBlueButton"
+            style="@style/slcBlueButton"
             android:layout_height="56dp"
             android:layout_marginTop="16dp"
             android:text="@string/photo_select_choose_photo"

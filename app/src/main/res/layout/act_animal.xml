@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".exercises.ex_animals">
+    tools:context=".exercises.ExAnimals">
 
 
     <ImageView
@@ -16,11 +16,11 @@
         android:background="@drawable/back_icon"
         android:layout_marginBottom="20dp"
         android:layout_marginStart="24dp"
-        app:layout_constraintBottom_toBottomOf="@+id/ivTopBlock"
-        app:layout_constraintStart_toStartOf="@+id/ivTopBlock" />
+        app:layout_constraintBottom_toBottomOf="@+id/ivUpperBlock"
+        app:layout_constraintStart_toStartOf="@+id/ivUpperBlock" />
 
     <ImageView
-        android:id="@+id/ivTopBlock"
+        android:id="@+id/ivUpperBlock"
         android:layout_width="match_parent"
         android:layout_height="92dp"
         android:background="@color/deep_blue"
@@ -29,16 +29,16 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvAnimalsHeader"
+        android:id="@+id/tvAnimalsHead"
         style="@style/h5Medium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         android:layout_marginStart="21dp"
         android:gravity="center_horizontal"
-        android:text="@string/animal_exercise_title"
+        android:text="@string/animal_title"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="@+id/ivTopBlock"
+        app:layout_constraintBottom_toBottomOf="@+id/ivUpperBlock"
         app:layout_constraintStart_toEndOf="@+id/btnBack" />
 
     <ImageView
@@ -49,10 +49,10 @@
         android:layout_marginTop="17dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivTopBlock" />
+        app:layout_constraintTop_toBottomOf="@+id/ivUpperBlock" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/clInputArea"
+        android:id="@+id/CLInputArea"
         android:layout_width="327dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -67,7 +67,7 @@
             style="@style/bodyMediumSmallTitles"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/animal_exercise_request"
+            android:text="@string/animal_request"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -82,10 +82,11 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/inputAnimalEditText"
-                style="@style/textInput"
+                style="@style/TIETEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text" />
+                android:inputType="text"
+                tools:ignore="SpeakableTextPresentCheck" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -93,12 +94,12 @@
 
     <Button
         android:id="@+id/btnCheckAnimal"
-        style="@style/selectBlueButton"
+        style="@style/slcBlueButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="17dp"
-        android:text="@string/animal_exercise_check"
-        app:layout_constraintTop_toBottomOf="@+id/clInputArea" />
+        android:text="@string/animal_check"
+        app:layout_constraintTop_toBottomOf="@+id/CLInputArea" />
 
     <TextView
         android:id="@+id/tvResultIcon"
@@ -110,7 +111,7 @@
         android:textSize="160sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivTopBlock"
+        app:layout_constraintTop_toBottomOf="@+id/ivUpperBlock"
         android:visibility="gone"/>
 
     <TextView
@@ -124,13 +125,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvResultIcon"
-        tools:text="@string/animal_exercise_good"
+        tools:text="@string/animal_good"
         android:visibility="gone"/>
 
     <Button
         android:id="@+id/btnAnimalNext"
-        style="@style/selectBlueButton"
-        android:text="@string/animal_exercise_next"
+        style="@style/slcBlueButton"
+        android:text="@string/animal_next"
         android:layout_marginTop="80dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -139,8 +140,8 @@
 
     <Button
         android:id="@+id/btnAnimalAgain"
-        style="@style/selectBlueButton"
-        android:text="@string/animal_exercise_again"
+        style="@style/slcBlueButton"
+        android:text="@string/animal_again"
         android:layout_marginTop="11dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

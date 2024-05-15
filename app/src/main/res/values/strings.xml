@@ -1,22 +1,22 @@
 <resources>
     <string name="app_name" translatable="false">Language App</string>
-    <string name="sad_connection_smile" translatable="false">😞</string>
+    <string name="sad_smile" translatable="false">😞</string>
     <string name="no_connection">No internet connection</string>
     <string name="check_connection">Check again</string>
-    <string name="onboarding1_title">Confidence in your words</string>
-    <string name="onboarding1_paragraph">"With conversation-based learning, you'll be talking from lesson one"</string>
-    <string name="onboarding2_title">Take your time to learn</string>
-    <string name="onboarding2_paragraph">Develop a habit of learning and make it a part of your daily routine</string>
-    <string name="onboarding3_title">The lessons you need to learn</string>
-    <string name="onboarding3_paragraph">Using a variety of learning styles to learn and retain</string>
+    <string name="onboarding_title1">Confidence in your words</string>
+    <string name="onboarding_prg1">"With conversation-based learning, you'll be talking from lesson one"</string>
+    <string name="onboarding_title2">Take your time to learn</string>
+    <string name="onboarding_prg2">Develop a habit of learning and make it a part of your daily routine</string>
+    <string name="onboarding_title3">The lessons you need to learn</string>
+    <string name="onboarding_prg3">Using a variety of learning styles to learn and retain</string>
     <string name="onboarding_skip">Skip onboarding</string>
-    <string name="onboarding_more_button">More</string>
-    <string name="onboarding_choose_button">Choose a language</string>
+    <string name="onboarding_more_btn">More</string>
+    <string name="onboarding_select_btn">Choose a language</string>
     <string name="language_select_title">Language select</string>
     <string name="language_select_question">What is your Mother language?</string>
-    <string name="language_select_button">Choose</string>
-    <string name="onboarding_next_button">Next</string>
-    <string name="login_header">Login</string>
+    <string name="language_select_btn">Choose</string>
+    <string name="onboarding_next_btn">Next</string>
+    <string name="login_head">Login</string>
     <string name="login_welcome">For free, join now and start learning</string>
     <string name="login_email_title">Email Address</string>
     <string name="login_email_hint" translatable="false">Email</string>
@@ -27,23 +27,23 @@
     <string name="login_google_before_span">You can use</string>
     <string name="login_google_span">Google for</string>
     <string name="login_google_after_span">sign in</string>
-    <string name="signup_header">Signup</string>
-    <string name="signup_welcome">Create an Account</string>
-    <string name="signup_first_title">First Name</string>
-    <string name="signup_second_title">Second Name</string>
-    <string name="signup_email_title">Email Address</string>
-    <string name="signup_before_span">Already you member?</string>
-    <string name="signup_span">Login</string>
-    <string name="signup_first_name_hint">Your first name</string>
-    <string name="signup_second_name_hint">Your second name</string>
-    <string name="signup_email_hint" translatable="false">Email</string>
-    <string name="signup_welcome_password">Choose a Password</string>
-    <string name="signup_continue">Continue</string>
-    <string name="signup_complete">Signup</string>
-    <string name="signup_password_title">Password</string>
-    <string name="signup_password_hint" translatable="false">●●●●●●●</string>
-    <string name="signup_confirm_title">Confirm Password</string>
-    <string name="signup_confirm_hint" translatable="false">●●●●●●●</string>
+    <string name="sign_header">Signup</string>
+    <string name="sign_welcome">Create an Account</string>
+    <string name="sign_first_title">First Name</string>
+    <string name="sign_second_title">Second Name</string>
+    <string name="sign_email_title">Email Address</string>
+    <string name="sign_before_span">Already you member?</string>
+    <string name="sign_span">Login</string>
+    <string name="sign_first_name_hint">Your first name</string>
+    <string name="sign_second_name_hint">Your second name</string>
+    <string name="sign_email_hint" translatable="false">Email</string>
+    <string name="sign_welcome_password">Choose a Password</string>
+    <string name="sign_continue">Continue</string>
+    <string name="sign_complete">Signup</string>
+    <string name="sign_password_title">Password</string>
+    <string name="sign_password_hint" translatable="false">●●●●●●●</string>
+    <string name="sign_confirm_title">Confirm Password</string>
+    <string name="sign_confirm_hint" translatable="false">●●●●●●●</string>
     <string name="invalid_data_title">Invalid data</string>
     <string name="invalid_data_message">The data you entered is invalid</string>
     <string name="no_sign_in_title">"Can't sign in"</string>
@@ -61,41 +61,41 @@
     <string name="profile_change_image">Change your image</string>
     <string name="profile_logout">Logout</string>
     <string name="profile_welcome">Your profile, %s</string>
-    <string name="animal_exercise_title">Guess the animal</string>
-    <string name="animal_exercise_request">Write who is on image</string>
-    <string name="animal_exercise_good">Holly Molly! That is Right!</string>
-    <string name="animal_exercise_bad">"Eh? Wrong answer :(\nThat is: %s"</string>
-    <string name="animal_exercise_next">Next</string>
-    <string name="animal_exercise_check">Check</string>
-    <string name="animal_exercise_again">Try again</string>
+    <string name="animal_title">Guess the animal</string>
+    <string name="animal_request">Write who is on image</string>
+    <string name="animal_good">Holly Molly! That is Right!</string>
+    <string name="animal_wrong">"Eh? Wrong answer :(\nThat is: %s"</string>
+    <string name="animal_next">Next</string>
+    <string name="animal_check">Check</string>
+    <string name="animal_again">Try again</string>
+    <string name="animal_icon" translatable="false">🐻‍❄️</string>
+    <string name="animal_btn_text">Guess the animal</string>
     <string name="multiplayer_icon" translatable="false">🎮</string>
     <string name="audition_icon" translatable="false">🔊</string>
     <string name="word_icon" translatable="false">✏️</string>
-    <string name="animal_icon" translatable="false">🐻‍❄️</string>
-    <string name="animal_exercise_button_text">Guess the animal</string>
-    <string name="word_exercise_button_text">Word practice</string>
-    <string name="audition_exercise_button_text">Audition</string>
-    <string name="multiplayer_exercise_button_text">Game</string>
+    <string name="word_btn_text">Word practice</string>
+    <string name="audition_btn_text">Audition</string>
+    <string name="multiplayer_btn_text">Game</string>
     <string name="animal_good_answer_icon" translatable="false">🎉</string>
     <string name="animal_bad_answer_icon" translatable="false">😿</string>
     <string name="resize_photo_title">Your photo is gorgeous!</string>
     <string name="resize_photo_message">"Just resize that photo \nfor fit in square"</string>
     <string name="resize_photo_button">Use that image</string>
-    <string name="word_exercise_title">Word practice</string>
-    <string name="word_exercise_check">Check</string>
-    <string name="word_exercise_next">Next</string>
+    <string name="word_title">Word practice</string>
+    <string name="word_check">Check</string>
+    <string name="word_next">Next</string>
     <string name="bottom_photo_select_message">Where do you want to select the photo from?</string>
     <string name="photo_select_choose_image">Choose image</string>
     <string name="photo_select_choose_photo">Take photo</string>
     <string name="multiplayer_player_label">You</string>
     <string name="multiplayer_opponent_label" translatable="false">P2</string>
     <string name="multiplayer_both_label" translatable="false">%s/%s</string>
-    <string name="audition_exercise_title">Listening</string>
-    <string name="audition_exercise_welcome">Please press button and say this word. Our service will check your pronunciation</string>
-    <string name="audition_exercise_button_check">Check my speech</string>
-    <string name="audition_exercise_result_title">Your result: %s</string>
-    <string name="audition_exercise_button_correct">Yay! Go next</string>
-    <string name="audition_exercise_button_wrong">Oops! Go next</string>
-    <string name="audition_exercise_start_listening">Listening…</string>
-    <string name="audition_exercise_start_recognition">Recognize…</string>
+    <string name="audition_title">Listening</string>
+    <string name="audition_welcome">Please press button and say this word. Our service will check your pronunciation</string>
+    <string name="audition_btn_check">Check my speech</string>
+    <string name="audition_result_title">Your result: %s</string>
+    <string name="audition_btn_correct">Yay! Go next</string>
+    <string name="audition_btn_wrong">Oops! Go next</string>
+    <string name="audition_start_listening">Listening…</string>
+    <string name="audition_start_recognition">Recognize…</string>
 </resources>

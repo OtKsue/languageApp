@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".start_activities.ThirdFragmentOnboard">
+    tools:context=".start_activities.FirstFragmentOnboard">
 
     <ImageView
         android:id="@+id/ivOnboardingIcon"
@@ -12,7 +12,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="140dp"
 
-        android:background="@drawable/image_onboarding_3"
+
+        android:background="@drawable/img_onboarding_1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -32,19 +33,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="@string/onboarding3_title"
+            android:text="@string/onboarding_title1"
             android:gravity="center_horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
         <TextView
             style="@style/bodyMedium"
-            android:id="@+id/tvOnboardingParagraph"
+            android:id="@+id/tvOnboardingPrg"
             android:layout_marginTop="8dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="@string/onboarding3_paragraph"
+            android:text="@string/onboarding_prg1"
             android:gravity="center_horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

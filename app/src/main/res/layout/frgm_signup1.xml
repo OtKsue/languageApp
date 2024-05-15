@@ -8,11 +8,11 @@
 
 
     <TextView
-        android:id="@+id/tvSignupTitle"
+        android:id="@+id/tvSignTitle"
         style="@style/h5Medium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/signup_welcome"
+        android:text="@string/sign_welcome"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -25,19 +25,19 @@
         android:layout_marginEnd="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvSignupTitle">
+        app:layout_constraintTop_toBottomOf="@+id/tvSignTitle">
 
         <TextView
             android:id="@+id/tvFirstNameTitle"
             style="@style/bodyMediumSmallTitles"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/signup_first_title"
+            android:text="@string/sign_first_title"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/firstNameTextInputLayout"
+            android:id="@+id/TILfirstName"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -48,10 +48,10 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/inputFirstNameEditText"
-                style="@style/textInput"
+                style="@style/TIETEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/signup_first_name_hint"
+                android:hint="@string/sign_first_name_hint"
                 android:inputType="textPersonName" />
 
 
@@ -76,7 +76,7 @@
             style="@style/bodyMediumSmallTitles"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/signup_second_title"
+            android:text="@string/sign_second_title"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -92,10 +92,10 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/inputSecondNameEditText"
-                style="@style/textInput"
+                style="@style/TIETEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/signup_second_name_hint"
+                android:hint="@string/sign_second_name_hint"
                 android:inputType="textPersonName" />
 
 
@@ -105,7 +105,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/clEmail"
+        android:id="@+id/CLEmail"
         android:layout_marginTop="24dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -120,7 +120,7 @@
             style="@style/bodyMediumSmallTitles"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/signup_email_title"
+            android:text="@string/sign_email_title"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -136,10 +136,10 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/inputEmailEditText"
-                style="@style/textInput"
+                style="@style/TIETEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/signup_email_hint"
+                android:hint="@string/sign_email_hint"
                 android:inputType="textPersonName" />
 
 

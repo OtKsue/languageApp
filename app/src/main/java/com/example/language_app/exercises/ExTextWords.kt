@@ -15,7 +15,7 @@ import io.github.jan.supabase.postgrest.postgrest
 import io.github.jan.supabase.gotrue.auth
 import io.github.jan.supabase.postgrest.from
 
-class ex_text_words : ActivityBase<ActWordsBinding>() {
+class ExTextWords : ActivityBase<ActWordsBinding>() {
 
     override val screenBinding: ActWordsBinding by lazy {
         ActWordsBinding.inflate(layoutInflater)
@@ -27,7 +27,7 @@ class ex_text_words : ActivityBase<ActWordsBinding>() {
 
     private var correct: String = ""
 
-    private val gameManager = ex_text_words_work()
+    private val gameManager = ExTextWordsWork()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         lifecycleScope.launch {
@@ -43,7 +43,7 @@ class ex_text_words : ActivityBase<ActWordsBinding>() {
 
                 if (isNext) {
                     getNewExercise()
-                    screenBinding.btnAction.setText(R.string.word_exercise_check)
+                    screenBinding.btnAction.setText(R.string.word_check)
                     isNext = false
                 }
                 else {
@@ -55,7 +55,7 @@ class ex_text_words : ActivityBase<ActWordsBinding>() {
 
                     wordList.forEach { wordItem ->
                         if (wordItem.word == correct) {
-                            if (wordItem.isSelected) updatePoints() else gameManager.resetStreak()
+                            if (wordItem.isSelected) updatePoints() else gameManager.resetStripe()
                             wordItem.isCorrect = true
                         }
                         if (wordItem.isSelected && (wordItem.word != correct)) {
@@ -63,7 +63,7 @@ class ex_text_words : ActivityBase<ActWordsBinding>() {
                         }
                     }
                     isNext = true
-                    screenBinding.btnAction.setText(R.string.word_exercise_next)
+                    screenBinding.btnAction.setText(R.string.word_next)
                     screenBinding.rvWords.adapter?.notifyDataSetChanged()
                 }
             }

@@ -8,7 +8,6 @@ import android.speech.RecognitionListener
 import android.speech.RecognizerIntent
 import android.speech.SpeechRecognizer
 import android.view.animation.Animation
-import android.view.animation.AnimationUtils
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.lifecycleScope
@@ -23,9 +22,9 @@ import io.github.jan.supabase.postgrest.from
 import io.github.jan.supabase.postgrest.postgrest
 import kotlinx.coroutines.launch
 
-class ex_audition : ActivityBase<ActAuditionBinding>() {
+class ExAudition : ActivityBase<ActAuditionBinding>() {
 
-    private val gameManager: ex_audition_work = ex_audition_work()
+    private val gameManager: ExAuditionWork = ExAuditionWork()
 
     override val screenBinding: ActAuditionBinding by lazy {
         ActAuditionBinding.inflate(layoutInflater)
@@ -52,7 +51,7 @@ class ex_audition : ActivityBase<ActAuditionBinding>() {
             screenBinding.tvTranscription.text = exercise.transcription
             screenBinding.tvResultMessage.text = ""
             word = exercise.word
-            screenBinding.btnAction.setText(R.string.audition_exercise_button_check)
+            screenBinding.btnAction.setText(R.string.audition_btn_check)
         }
 
         speechRecognizer = SpeechRecognizer.createSpeechRecognizer(this)
@@ -75,12 +74,12 @@ class ex_audition : ActivityBase<ActAuditionBinding>() {
 
             override fun onEndOfSpeech() {
                 screenBinding.btnAction.clearAnimation()
-                screenBinding.btnAction.setText(R.string.audition_exercise_start_recognition)
+                screenBinding.btnAction.setText(R.string.audition_start_recognition)
             }
 
             override fun onError(error: Int) {
                 screenBinding.btnAction.clearAnimation()
-                screenBinding.btnAction.setText(R.string.audition_exercise_start_recognition)
+                screenBinding.btnAction.setText(R.string.audition_start_recognition)
                 onResults(results = null)
             }
 
@@ -95,14 +94,14 @@ class ex_audition : ActivityBase<ActAuditionBinding>() {
                 isSpeaking = false
                 isNext = true
                 screenBinding.tvResultMessage.text =
-                    getString(R.string.audition_exercise_result_title, userResult)
+                    getString(R.string.audition_result_title, userResult)
                 lifecycleScope.launch {
                     if (userResult == word) {
                         updatePoints()
-                        screenBinding.btnAction.setText(R.string.audition_exercise_button_correct)
+                        screenBinding.btnAction.setText(R.string.audition_btn_correct)
                     } else {
-                        gameManager.resetStreak()
-                        screenBinding.btnAction.setText(R.string.audition_exercise_button_wrong)
+                        gameManager.resetStripe()
+                        screenBinding.btnAction.setText(R.string.audition_btn_wrong)
                     }
                 }
             }
@@ -127,12 +126,12 @@ class ex_audition : ActivityBase<ActAuditionBinding>() {
                     screenBinding.tvResultMessage.text = ""
                     word = exercise.word
                     userResult = ""
-                    screenBinding.btnAction.setText(R.string.audition_exercise_button_check)
+                    screenBinding.btnAction.setText(R.string.audition_btn_check)
                     isNext = false
                 } else {
                     if (!isSpeaking) {
                         screenBinding.btnAction.startAnimation(pulseAnimation)
-                        screenBinding.btnAction.setText(R.string.audition_exercise_start_listening)
+                        screenBinding.btnAction.setText(R.string.audition_start_listening)
                         speechRecognizer.startListening(speechIntent)
                         isSpeaking = true
                     }

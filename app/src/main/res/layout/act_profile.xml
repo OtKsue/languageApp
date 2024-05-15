@@ -14,11 +14,11 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="44dp"
         android:elevation="2dp"
-        app:layout_constraintStart_toStartOf="@+id/ivTopBlock"
+        app:layout_constraintStart_toStartOf="@+id/ivUpperBlock"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/ivTopBlock"
+        android:id="@+id/ivUpperBlock"
         android:layout_width="match_parent"
         android:layout_height="231dp"
         android:background="@color/deep_blue"
@@ -39,7 +39,7 @@
         app:layout_constraintTop_toBottomOf="@+id/ivUserPhoto" />
 
     <Button
-        style="@style/selectBlueButton"
+        style="@style/slcBlueButton"
         android:id="@+id/btnLogout"
         android:layout_marginBottom="26dp"
         android:text="@string/profile_logout"
@@ -49,7 +49,7 @@
 
     <Button
         android:id="@+id/btnChangeImage"
-        style="@style/selectBlueButton"
+        style="@style/slcBlueButton"
         android:layout_marginBottom="14dp"
         android:text="@string/profile_change_image"
         app:layout_constraintBottom_toTopOf="@+id/btnLogout"
@@ -58,7 +58,7 @@
 
     <Button
         android:id="@+id/btnChangeLanguage"
-        style="@style/selectBlueButton"
+        style="@style/slcBlueButton"
         android:layout_marginBottom="14dp"
         android:text="@string/profile_change_language"
         app:layout_constraintBottom_toTopOf="@+id/btnChangeImage"
@@ -67,7 +67,7 @@
 
     <Button
         android:id="@+id/btnSwitchTheme"
-        style="@style/selectBlueButton"
+        style="@style/slcBlueButton"
         android:layout_marginBottom="14dp"
         tools:text="@string/profile_switch_to_dark"
         app:layout_constraintBottom_toTopOf="@+id/btnChangeLanguage"

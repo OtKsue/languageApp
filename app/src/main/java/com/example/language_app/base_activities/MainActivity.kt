@@ -11,10 +11,10 @@ import com.example.language_app.R
 import com.example.language_app.databases.User
 import com.example.language_app.databases.UserInfo
 import com.example.language_app.databinding.ActMainBinding
-import com.example.language_app.exercises.ex_animals
-import com.example.language_app.exercises.ex_audition
-import com.example.language_app.exercises.ex_text_words_mm
-import com.example.language_app.exercises.ex_text_words
+import com.example.language_app.exercises.ExAnimals
+import com.example.language_app.exercises.ExAudition
+import com.example.language_app.exercises.ExTextWordsMM
+import com.example.language_app.exercises.ExTextWords
 import com.example.language_app.top_users.BoardOfLeaders
 import com.example.language_app.user_profile.UserProfileActivity
 import io.github.jan.supabase.gotrue.auth
@@ -38,22 +38,22 @@ class MainActivity : ActivityBase<ActMainBinding>() {
         setContentView(screenBinding.root)
 
         screenBinding.exAnimal.setOnClickListener {
-            val intent = Intent(this@MainActivity, ex_animals::class.java)
+            val intent = Intent(this@MainActivity, ExAnimals::class.java)
             startActivity(intent)
         }
 
         screenBinding.exWord.setOnClickListener {
-            val intent = Intent(this@MainActivity, ex_text_words::class.java)
+            val intent = Intent(this@MainActivity, ExTextWords::class.java)
             startActivity(intent)
         }
 
         screenBinding.exMultiplayer.setOnClickListener {
-            val intent = Intent(this@MainActivity, ex_text_words_mm::class.java)
+            val intent = Intent(this@MainActivity, ExTextWordsMM::class.java)
             startActivity(intent)
         }
 
         screenBinding.exAudition.setOnClickListener {
-            val intent = Intent(this@MainActivity, ex_audition::class.java)
+            val intent = Intent(this@MainActivity, ExAudition::class.java)
             startActivity(intent)
         }
 
@@ -62,8 +62,8 @@ class MainActivity : ActivityBase<ActMainBinding>() {
             startActivity(intent)
         }
 
-        screenBinding.rvLeaderBoard.layoutManager = LinearLayoutManager(this@MainActivity)
-        screenBinding.rvLeaderBoard.adapter = BoardOfLeaders(userItems)
+        screenBinding.rvTopUsers.layoutManager = LinearLayoutManager(this@MainActivity)
+        screenBinding.rvTopUsers.adapter = BoardOfLeaders(userItems)
     }
 
     override fun onStart() {
@@ -100,7 +100,7 @@ class MainActivity : ActivityBase<ActMainBinding>() {
                 userItems.add(User(it.userPhotoUrl, it.firstName, it.secondName, it.points))
             }
 
-            screenBinding.rvLeaderBoard.adapter?.notifyDataSetChanged()
+            screenBinding.rvTopUsers.adapter?.notifyDataSetChanged()
         }
     }
 
