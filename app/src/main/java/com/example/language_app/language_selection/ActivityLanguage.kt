@@ -52,7 +52,7 @@ class ActivityLanguage : ActivityBase<ActLanguageChoiceBinding>() {
                     "English" -> "en"
                     "Chinese" -> "ch"
                     "Belarus" -> "be"
-                    "Kazakh" -> "ka"
+                    "Kazakh" -> "kaz"
                     else -> "en"
                 }
                 setLocale(language = selectedLocale, context = this)
