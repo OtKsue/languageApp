@@ -30,7 +30,7 @@ class UserProfileActivity : ActivityBase<ActProfileBinding>() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val receivedDataJson = intent.getStringExtra("UserInfo")
+        val receivedDataJson = intent.getStringExtra("Users_Information")
 
         val userInfo = receivedDataJson?.let { decodeFromString<UserInfo>(it) }
 
