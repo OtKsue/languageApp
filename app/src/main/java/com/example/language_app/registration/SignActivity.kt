@@ -124,9 +124,15 @@ class SignActivity : ActivityBase<ActSignupBinding>() {
                         finish()
 
                     } catch (e: Exception) {
+                        val errorMessage = if (e.message == "No session found") {
+                            "Подтвердите email и авторизируйтесь"
+                        } else {
+                            e.message
+                        }
+
                         AlertDialog.Builder(this@SignActivity)
                             .setTitle("Something wrong")
-                            .setMessage(e.message)
+                            .setMessage(errorMessage)
                             .setPositiveButton("OK") { dialog, _ -> dialog.dismiss() }
                             .show()
                     }
